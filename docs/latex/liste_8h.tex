@@ -1,0 +1,330 @@
+\hypertarget{liste_8h}{}\section{src/liste.h File Reference}
+\label{liste_8h}\index{src/liste.\+h@{src/liste.\+h}}
+
+
+Liste statique.  
+
+
+{\ttfamily \#include \char`\"{}elementliste.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structliste}{liste}}
+\begin{DoxyCompactList}\small\item\em Liste (pile + file) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{liste_8h_a5a724e718ea66e676efba2647aa56414}\label{liste_8h_a5a724e718ea66e676efba2647aa56414}} 
+\#define \mbox{\hyperlink{liste_8h_a5a724e718ea66e676efba2647aa56414}{D\+I\+M\+M\+AX}}~100
+\begin{DoxyCompactList}\small\item\em taille maximale de la liste statique \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{liste_8h_a3ee479371002a0a258e5c4111cc6e54f}\label{liste_8h_a3ee479371002a0a258e5c4111cc6e54f}} 
+\#define \mbox{\hyperlink{liste_8h_a3ee479371002a0a258e5c4111cc6e54f}{V\+I\+DE}}~-\/1
+\begin{DoxyCompactList}\small\item\em constante pour indiquer que la liste est vide (par convention) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{liste_8h_a1fc5bcb36d07aad251e3d65c3fecf01c}\label{liste_8h_a1fc5bcb36d07aad251e3d65c3fecf01c}} 
+typedef struct \mbox{\hyperlink{structliste}{liste}} \mbox{\hyperlink{liste_8h_a1fc5bcb36d07aad251e3d65c3fecf01c}{liste}}
+\begin{DoxyCompactList}\small\item\em Définit le type liste comme étant une struct liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{liste_8h_aa06cfcafd95438aeebfd731dbbffd9a0}{nb\+Elt\+List}} (\mbox{\hyperlink{structliste}{liste}} lst)
+\begin{DoxyCompactList}\small\item\em Renvoie le nombre d\textquotesingle{}éléments dans une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_a5c4d14a21c2e305ed6c4110d63561e76}{create\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initialise une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_ab362f8b1c683c374542de1c37d5a3748}{add\+Front\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} e)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément à la fin (en haut) d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_ae44fac1e392193e620781404f18d119e}{add\+Tail\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} e)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément au début (en bas) d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_aedd2f92afd4787bee1b7898be436c0f7}{del\+Tail\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Supprime le premier élément (en bas) d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_a36245e8afb6334fcbbc3fc0254356a5f}{del\+Front\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Supprime le dernier élément (en haut) d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_a654f9e13ded641af8eabeca39fe88513}{head\+List}} (\mbox{\hyperlink{structliste}{liste}} p, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Renvoie le dernier élément (en haut) d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_a952b7b53e6a0bf83ed77b30f56039cd3}{tail\+List}} (\mbox{\hyperlink{structliste}{liste}} p, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Renvoie le premier élément (en bas) d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{liste_8h_aca4cf493ed4e3277629db742a21d4d98}{empty\+List}} (\mbox{\hyperlink{structliste}{liste}} p)
+\begin{DoxyCompactList}\small\item\em Renvoie si la liste est vide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{liste_8h_a3e9debc4df97b3cea0ee38e37a1f9c62}{full\+List}} (\mbox{\hyperlink{structliste}{liste}} p)
+\begin{DoxyCompactList}\small\item\em Renvoie si la liste est pleine (par rapport à la const D\+I\+M\+M\+AX) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_a1efa21bcdfc9f7008f5055d45660ec0a}{dump\+List}} (\mbox{\hyperlink{structliste}{liste}} p, F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Affiche la liste sur le fichier fp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_aab2683342bb0aca5e45f6990a33301ac}{swap\+Elt\+List}} (\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$a, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Echange deux éléments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_a24de5e6ed5544ca17f1c9036852dad5a}{bubble\+Sort\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Trie une liste avec la méthode Bubble. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8h_ab925256fc1775b71a5986418101f09f3}{pick\+Elt\+List}} (\mbox{\hyperlink{structliste}{liste}} l, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$e, int index)
+\begin{DoxyCompactList}\small\item\em Récupère un élément d\textquotesingle{}une liste. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{liste_8h_a2d730599f1058e59d270c4acb0a90e43}{belong\+Elt\+List}} (\mbox{\hyperlink{structliste}{liste}} p, \mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} e)
+\begin{DoxyCompactList}\small\item\em Cherche un élément est dans une liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Liste statique. 
+
+\begin{DoxyAuthor}{Author}
+Vincent Dugat 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{liste_8h_ab362f8b1c683c374542de1c37d5a3748}\label{liste_8h_ab362f8b1c683c374542de1c37d5a3748}} 
+\index{liste.\+h@{liste.\+h}!add\+Front\+List@{add\+Front\+List}}
+\index{add\+Front\+List@{add\+Front\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{add\+Front\+List()}{addFrontList()}}
+{\footnotesize\ttfamily void add\+Front\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Ajoute un élément à la fin (en haut) d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\mbox{\tt in}  & {\em e} & \+: Element à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_ae44fac1e392193e620781404f18d119e}\label{liste_8h_ae44fac1e392193e620781404f18d119e}} 
+\index{liste.\+h@{liste.\+h}!add\+Tail\+List@{add\+Tail\+List}}
+\index{add\+Tail\+List@{add\+Tail\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{add\+Tail\+List()}{addTailList()}}
+{\footnotesize\ttfamily void add\+Tail\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Ajoute un élément au début (en bas) d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\mbox{\tt in}  & {\em e} & \+: Element à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_a2d730599f1058e59d270c4acb0a90e43}\label{liste_8h_a2d730599f1058e59d270c4acb0a90e43}} 
+\index{liste.\+h@{liste.\+h}!belong\+Elt\+List@{belong\+Elt\+List}}
+\index{belong\+Elt\+List@{belong\+Elt\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{belong\+Elt\+List()}{belongEltList()}}
+{\footnotesize\ttfamily bool belong\+Elt\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Cherche un élément est dans une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste où chercher \\
+\hline
+\mbox{\tt in}  & {\em e} & \+: Element à chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true=trouvé, false=pas trouvé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8h_a24de5e6ed5544ca17f1c9036852dad5a}\label{liste_8h_a24de5e6ed5544ca17f1c9036852dad5a}} 
+\index{liste.\+h@{liste.\+h}!bubble\+Sort\+List@{bubble\+Sort\+List}}
+\index{bubble\+Sort\+List@{bubble\+Sort\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{bubble\+Sort\+List()}{bubbleSortList()}}
+{\footnotesize\ttfamily void bubble\+Sort\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Trie une liste avec la méthode Bubble. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em p} & \+: Liste à trier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_a5c4d14a21c2e305ed6c4110d63561e76}\label{liste_8h_a5c4d14a21c2e305ed6c4110d63561e76}} 
+\index{liste.\+h@{liste.\+h}!create\+List@{create\+List}}
+\index{create\+List@{create\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{create\+List()}{createList()}}
+{\footnotesize\ttfamily void create\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Initialise une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_a36245e8afb6334fcbbc3fc0254356a5f}\label{liste_8h_a36245e8afb6334fcbbc3fc0254356a5f}} 
+\index{liste.\+h@{liste.\+h}!del\+Front\+List@{del\+Front\+List}}
+\index{del\+Front\+List@{del\+Front\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{del\+Front\+List()}{delFrontList()}}
+{\footnotesize\ttfamily void del\+Front\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Supprime le dernier élément (en haut) d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_aedd2f92afd4787bee1b7898be436c0f7}\label{liste_8h_aedd2f92afd4787bee1b7898be436c0f7}} 
+\index{liste.\+h@{liste.\+h}!del\+Tail\+List@{del\+Tail\+List}}
+\index{del\+Tail\+List@{del\+Tail\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{del\+Tail\+List()}{delTailList()}}
+{\footnotesize\ttfamily void del\+Tail\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Supprime le premier élément (en bas) d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_a1efa21bcdfc9f7008f5055d45660ec0a}\label{liste_8h_a1efa21bcdfc9f7008f5055d45660ec0a}} 
+\index{liste.\+h@{liste.\+h}!dump\+List@{dump\+List}}
+\index{dump\+List@{dump\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{dump\+List()}{dumpList()}}
+{\footnotesize\ttfamily void dump\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Affiche la liste sur le fichier fp. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\mbox{\tt in,out}  & {\em fp} & \+: Fichier où écrire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_aca4cf493ed4e3277629db742a21d4d98}\label{liste_8h_aca4cf493ed4e3277629db742a21d4d98}} 
+\index{liste.\+h@{liste.\+h}!empty\+List@{empty\+List}}
+\index{empty\+List@{empty\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{empty\+List()}{emptyList()}}
+{\footnotesize\ttfamily bool empty\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Renvoie si la liste est vide. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true=vide, false=pas vide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8h_a3e9debc4df97b3cea0ee38e37a1f9c62}\label{liste_8h_a3e9debc4df97b3cea0ee38e37a1f9c62}} 
+\index{liste.\+h@{liste.\+h}!full\+List@{full\+List}}
+\index{full\+List@{full\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{full\+List()}{fullList()}}
+{\footnotesize\ttfamily bool full\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Renvoie si la liste est pleine (par rapport à la const D\+I\+M\+M\+AX) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true=pleine, false=pas pleine 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8h_a654f9e13ded641af8eabeca39fe88513}\label{liste_8h_a654f9e13ded641af8eabeca39fe88513}} 
+\index{liste.\+h@{liste.\+h}!head\+List@{head\+List}}
+\index{head\+List@{head\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{head\+List()}{headList()}}
+{\footnotesize\ttfamily void head\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Renvoie le dernier élément (en haut) d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\mbox{\tt out}  & {\em e} & \+: Element renvoyé \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_aa06cfcafd95438aeebfd731dbbffd9a0}\label{liste_8h_aa06cfcafd95438aeebfd731dbbffd9a0}} 
+\index{liste.\+h@{liste.\+h}!nb\+Elt\+List@{nb\+Elt\+List}}
+\index{nb\+Elt\+List@{nb\+Elt\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{nb\+Elt\+List()}{nbEltList()}}
+{\footnotesize\ttfamily int nb\+Elt\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{lst }\end{DoxyParamCaption})}
+
+
+
+Renvoie le nombre d\textquotesingle{}éléments dans une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lst} & \+: Liste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int nombre d\textquotesingle{}éléments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8h_ab925256fc1775b71a5986418101f09f3}\label{liste_8h_ab925256fc1775b71a5986418101f09f3}} 
+\index{liste.\+h@{liste.\+h}!pick\+Elt\+List@{pick\+Elt\+List}}
+\index{pick\+Elt\+List@{pick\+Elt\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{pick\+Elt\+List()}{pickEltList()}}
+{\footnotesize\ttfamily void pick\+Elt\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{l,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$}]{e,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Récupère un élément d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l} & \+: Liste \\
+\hline
+\mbox{\tt out}  & {\em e} & \+: Element \\
+\hline
+\mbox{\tt in}  & {\em index} & \+: Index de l\textquotesingle{}élément \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_aab2683342bb0aca5e45f6990a33301ac}\label{liste_8h_aab2683342bb0aca5e45f6990a33301ac}} 
+\index{liste.\+h@{liste.\+h}!swap\+Elt\+List@{swap\+Elt\+List}}
+\index{swap\+Elt\+List@{swap\+Elt\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{swap\+Elt\+List()}{swapEltList()}}
+{\footnotesize\ttfamily void swap\+Elt\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Echange deux éléments. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em a} & \+: Element 1 \\
+\hline
+\mbox{\tt in,out}  & {\em b} & \+: Element 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{liste_8h_a952b7b53e6a0bf83ed77b30f56039cd3}\label{liste_8h_a952b7b53e6a0bf83ed77b30f56039cd3}} 
+\index{liste.\+h@{liste.\+h}!tail\+List@{tail\+List}}
+\index{tail\+List@{tail\+List}!liste.\+h@{liste.\+h}}
+\subsubsection{\texorpdfstring{tail\+List()}{tailList()}}
+{\footnotesize\ttfamily void tail\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_ad1cbc6cf883405e3e7ab3cd6e1451dbb}{Elementliste}} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Renvoie le premier élément (en bas) d\textquotesingle{}une liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & \+: Liste \\
+\hline
+\mbox{\tt out}  & {\em e} & \+: Element renvoyé \\
+\hline
+\end{DoxyParams}

@@ -1,18 +1,16 @@
 cmake_minimum_required(VERSION 3.12)
-project(projet-s3)
+project(projet_s3 C)
 
-add_definitions(-std=c99)
+set(CMAKE_C_STANDARD 11)
 
-if (CMAKE_BUILD_TYPE MATCHES Debug)
-    add_definitions(-DDEBUG=1)
-endif()
+include_directories(src)
 
-#target_include_directories(projet_s3 PRIVATE src)
 add_executable(projet_s3
-        src/main.c
-        src/global.h
-        src/liste.h
-        src/elementliste.h
-        src/liste.c
         src/elementliste.c
-        )
+        src/elementliste.h
+        src/global.h
+        src/liste.c
+        src/liste.h
+        src/main.c
+        src/utils_sd.c
+        src/utils_sd.h)

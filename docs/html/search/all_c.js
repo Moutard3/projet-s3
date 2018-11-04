@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pickeltlist',['pickEltList',['../liste_8c.html#ab925256fc1775b71a5986418101f09f3',1,'pickEltList(liste l, Elementliste *e, int index):&#160;liste.c'],['../liste_8h.html#ab925256fc1775b71a5986418101f09f3',1,'pickEltList(liste l, Elementliste *e, int index):&#160;liste.c']]],
-  ['poids',['poids',['../structs__arc__p.html#ac1abe8fa63a4167cf11ef707f524f0c4',1,'s_arc_p']]]
+  ['offset',['offset',['../structs__mat__char__dyn.html#aed7ea92f45bd273dde380a45ddced592',1,'s_mat_char_dyn']]],
+  ['orig',['orig',['../structs__arc__p.html#a9e217f04c0fbbe53b5ad22ba4eb2af25',1,'s_arc_p']]]
 ];

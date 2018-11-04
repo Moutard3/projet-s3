@@ -126,7 +126,7 @@ bool fullList(liste p) {
 /**
  * @brief Affiche la liste sur le fichier fp
  * @param[in] p : Liste
- * @param[in,out] fp : Fichier où écrire
+ * @param[in] fp : Fichier où écrire
  */
 void dumpList(liste p,FILE *fp) {
     Elementliste e;

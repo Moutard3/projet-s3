@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefghlmnopstv",
+  0: "abcdefghilmnopstuv",
   1: "ls",
-  2: "eglm",
-  3: "abcdefhmnpst",
+  2: "eglmu",
+  3: "abcdefhimnpst",
   4: "dnopt",
   5: "elt",
   6: "dv"
@@ -22,12 +22,12 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Data Structures",
-  2: "Files",
-  3: "Functions",
+  0: "Tout",
+  1: "Structures de données",
+  2: "Fichiers",
+  3: "Fonctions",
   4: "Variables",
-  5: "Typedefs",
+  5: "Définitions de type",
   6: "Macros"
 };
 

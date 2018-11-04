@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['liste',['liste',['../structliste.html',1,'liste'],['../liste_8h.html#a1fc5bcb36d07aad251e3d65c3fecf01c',1,'liste():&#160;liste.h']]],
-  ['liste_2ec',['liste.c',['../liste_8c.html',1,'']]],
-  ['liste_2eh',['liste.h',['../liste_8h.html',1,'']]]
+  ['init_5fmat_5fint',['init_mat_int',['../utils__sd_8c.html#a48718f42e674f032d418d56d9586a2bf',1,'init_mat_int(int **mat, int nbRows, int nbCol, int valeur):&#160;utils_sd.c'],['../utils__sd_8h.html#a48718f42e674f032d418d56d9586a2bf',1,'init_mat_int(int **mat, int nbRows, int nbCol, int valeur):&#160;utils_sd.c']]],
+  ['init_5ftab_5fint',['init_tab_int',['../utils__sd_8c.html#a941a572f313edd85907218084b61371a',1,'init_tab_int(int *tab, int dim, int valeur):&#160;utils_sd.c'],['../utils__sd_8h.html#a941a572f313edd85907218084b61371a',1,'init_tab_int(int *tab, int dim, int valeur):&#160;utils_sd.c']]]
 ];

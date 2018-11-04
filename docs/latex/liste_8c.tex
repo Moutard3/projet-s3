@@ -1,7 +1,7 @@
-\hypertarget{liste_8c}{}\section{src/liste.c File Reference}
+\hypertarget{liste_8c}{}\section{Référence du fichier src/liste.c}
 \label{liste_8c}\index{src/liste.\+c@{src/liste.\+c}}
 {\ttfamily \#include \char`\"{}liste.\+h\char`\"{}}\newline
-\subsection*{Functions}
+\subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{liste_8c_aa06cfcafd95438aeebfd731dbbffd9a0}{nb\+Elt\+List}} (\mbox{\hyperlink{structliste}{liste}} lst)
@@ -36,8 +36,8 @@ bool \mbox{\hyperlink{liste_8c_a2d730599f1058e59d270c4acb0a90e43}{belong\+Elt\+L
 \begin{DoxyCompactList}\small\item\em Cherche un élément est dans une liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-\begin{DoxyAuthor}{Author}
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
 Alexandre Saillet 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -45,7 +45,7 @@ Alexandre Saillet
 \end{DoxyDate}
 
 
-\subsection{Function Documentation}
+\subsection{Documentation des fonctions}
 \mbox{\Hypertarget{liste_8c_ab362f8b1c683c374542de1c37d5a3748}\label{liste_8c_ab362f8b1c683c374542de1c37d5a3748}} 
 \index{liste.\+c@{liste.\+c}!add\+Front\+List@{add\+Front\+List}}
 \index{add\+Front\+List@{add\+Front\+List}!liste.\+c@{liste.\+c}}
@@ -57,7 +57,7 @@ Alexandre Saillet
 Ajoute un élément à la fin (en haut) d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \mbox{\tt in}  & {\em e} & \+: Element à ajouter \\
@@ -74,7 +74,7 @@ Ajoute un élément à la fin (en haut) d\textquotesingle{}une liste.
 Ajoute un élément au début (en bas) d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \mbox{\tt in}  & {\em e} & \+: Element à ajouter \\
@@ -91,13 +91,13 @@ Ajoute un élément au début (en bas) d\textquotesingle{}une liste.
 Cherche un élément est dans une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste où chercher \\
 \hline
 \mbox{\tt in}  & {\em e} & \+: Element à chercher \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 bool true=trouvé, false=pas trouvé 
 \end{DoxyReturn}
 \mbox{\Hypertarget{liste_8c_a24de5e6ed5544ca17f1c9036852dad5a}\label{liste_8c_a24de5e6ed5544ca17f1c9036852dad5a}} 
@@ -111,7 +111,7 @@ bool true=trouvé, false=pas trouvé
 Trie une liste avec la méthode Bubble. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in,out}  & {\em p} & \+: Liste à trier \\
 \hline
 \end{DoxyParams}
@@ -126,7 +126,7 @@ Trie une liste avec la méthode Bubble.
 Initialise une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \end{DoxyParams}
@@ -141,7 +141,7 @@ Initialise une liste.
 Supprime le dernier élément (en haut) d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \end{DoxyParams}
@@ -156,7 +156,7 @@ Supprime le dernier élément (en haut) d\textquotesingle{}une liste.
 Supprime le premier élément (en bas) d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \end{DoxyParams}
@@ -171,10 +171,10 @@ Supprime le premier élément (en bas) d\textquotesingle{}une liste.
 Affiche la liste sur le fichier fp. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
-\mbox{\tt in,out}  & {\em fp} & \+: Fichier où écrire \\
+\mbox{\tt in}  & {\em fp} & \+: Fichier où écrire \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{liste_8c_aca4cf493ed4e3277629db742a21d4d98}\label{liste_8c_aca4cf493ed4e3277629db742a21d4d98}} 
@@ -188,11 +188,11 @@ Affiche la liste sur le fichier fp.
 Renvoie si la liste est vide. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 bool true=vide, false=pas vide 
 \end{DoxyReturn}
 \mbox{\Hypertarget{liste_8c_a3e9debc4df97b3cea0ee38e37a1f9c62}\label{liste_8c_a3e9debc4df97b3cea0ee38e37a1f9c62}} 
@@ -206,11 +206,11 @@ bool true=vide, false=pas vide
 Renvoie si la liste est pleine (par rapport à la const D\+I\+M\+M\+AX) 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 bool true=pleine, false=pas pleine 
 \end{DoxyReturn}
 \mbox{\Hypertarget{liste_8c_a654f9e13ded641af8eabeca39fe88513}\label{liste_8c_a654f9e13ded641af8eabeca39fe88513}} 
@@ -224,7 +224,7 @@ bool true=pleine, false=pas pleine
 Renvoie le dernier élément (en haut) d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \mbox{\tt out}  & {\em e} & \+: Element renvoyé \\
@@ -241,11 +241,11 @@ Renvoie le dernier élément (en haut) d\textquotesingle{}une liste.
 Renvoie le nombre d\textquotesingle{}éléments dans une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em lst} & \+: Liste \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 int nombre d\textquotesingle{}éléments 
 \end{DoxyReturn}
 \mbox{\Hypertarget{liste_8c_ab925256fc1775b71a5986418101f09f3}\label{liste_8c_ab925256fc1775b71a5986418101f09f3}} 
@@ -259,7 +259,7 @@ int nombre d\textquotesingle{}éléments
 Récupère un élément d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em l} & \+: Liste \\
 \hline
 \mbox{\tt out}  & {\em e} & \+: Element \\
@@ -278,7 +278,7 @@ Récupère un élément d\textquotesingle{}une liste.
 Echange deux éléments. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in,out}  & {\em a} & \+: Element 1 \\
 \hline
 \mbox{\tt in,out}  & {\em b} & \+: Element 2 \\
@@ -295,7 +295,7 @@ Echange deux éléments.
 Renvoie le premier élément (en bas) d\textquotesingle{}une liste. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em p} & \+: Liste \\
 \hline
 \mbox{\tt out}  & {\em e} & \+: Element renvoyé \\

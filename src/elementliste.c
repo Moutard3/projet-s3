@@ -35,7 +35,7 @@ void copie_element(Elementliste *cible, Elementliste source) {
 /**
  * @brief Affiche un élément vers un fichier
  * @param[in] e : Elément à afficher
- * @param[in,out] fp : Fichier où afficher
+ * @param[in] fp : Fichier où afficher
  */
 void afficher_element(Elementliste e,FILE *fp) {
     fprintf(fp, "(%d, %d, %d) ", e.orig, e.dest, e.poids);

@@ -1,23 +1,35 @@
-\hypertarget{global_8h}{}\section{src/global.h File Reference}
+\hypertarget{global_8h}{}\section{Référence du fichier src/global.h}
 \label{global_8h}\index{src/global.\+h@{src/global.\+h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
-\subsection*{Data Structures}
+\subsection*{Structures de données}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structs__arc__p}{s\+\_\+arc\+\_\+p}}
-\begin{DoxyCompactList}\small\item\em Arc pondéré \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Typedefs}
+\begin{DoxyCompactList}\small\item\em Arc pondéré \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structs__tab__dyn}{s\+\_\+tab\+\_\+dyn}}
+\begin{DoxyCompactList}\small\item\em pour encapsuler des tableaux dynamiques d\textquotesingle{}entiers avec la dimension. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structs__mat__dyn}{s\+\_\+mat\+\_\+dyn}}
+\begin{DoxyCompactList}\small\item\em pour encapsuler des matrices dynamiques d\textquotesingle{}entiers avec les lignes et colonnes. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structs__mat__char__dyn}{s\+\_\+mat\+\_\+char\+\_\+dyn}}
+\begin{DoxyCompactList}\small\item\em pour encapsuler des matrices dynamiques de chaînes avec les lignes, colonnes et nb colonnes avant les candidats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{structs__arc__p}{s\+\_\+arc\+\_\+p}} \mbox{\hyperlink{global_8h_a6481fa2d5db097a85ff5fe162c14068a}{t\+\_\+arc\+\_\+p}}
-\begin{DoxyCompactList}\small\item\em Arc pondéré \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Arc pondéré \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structs__tab__dyn}{s\+\_\+tab\+\_\+dyn}} \mbox{\hyperlink{global_8h_a71b518557f21194cba30d4f780d93055}{t\+\_\+tab\+\_\+int\+\_\+dyn}}
+\begin{DoxyCompactList}\small\item\em pour encapsuler des tableaux dynamiques d\textquotesingle{}entiers avec la dimension. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structs__mat__dyn}{s\+\_\+mat\+\_\+dyn}} \mbox{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}}
+\begin{DoxyCompactList}\small\item\em pour encapsuler des matrices dynamiques d\textquotesingle{}entiers avec les lignes et colonnes. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structs__mat__char__dyn}{s\+\_\+mat\+\_\+char\+\_\+dyn}} \mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}
+\begin{DoxyCompactList}\small\item\em pour encapsuler des matrices dynamiques de chaînes avec les lignes, colonnes et nb colonnes avant les candidats. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-\begin{DoxyAuthor}{Author}
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
 Vincent Dugat 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -25,7 +37,7 @@ Vincent Dugat
 \end{DoxyDate}
 
 
-\subsection{Typedef Documentation}
+\subsection{Documentation des définitions de type}
 \mbox{\Hypertarget{global_8h_a6481fa2d5db097a85ff5fe162c14068a}\label{global_8h_a6481fa2d5db097a85ff5fe162c14068a}} 
 \index{global.\+h@{global.\+h}!t\+\_\+arc\+\_\+p@{t\+\_\+arc\+\_\+p}}
 \index{t\+\_\+arc\+\_\+p@{t\+\_\+arc\+\_\+p}!global.\+h@{global.\+h}}
@@ -36,4 +48,34 @@ Vincent Dugat
 
 Arc pondéré 
 
-Définit le type t\+\_\+arc\+\_\+p comme struct \mbox{\hyperlink{structs__arc__p}{s\+\_\+arc\+\_\+p}} 
+Définit le type t\+\_\+arc\+\_\+p comme struct \mbox{\hyperlink{structs__arc__p}{s\+\_\+arc\+\_\+p}} \mbox{\Hypertarget{global_8h_a6246790d2f4187545380406f21036c05}\label{global_8h_a6246790d2f4187545380406f21036c05}} 
+\index{global.\+h@{global.\+h}!t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn@{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}
+\index{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn@{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}!global.\+h@{global.\+h}}
+\subsubsection{\texorpdfstring{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}{t\_mat\_char\_star\_dyn}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__mat__char__dyn}{s\+\_\+mat\+\_\+char\+\_\+dyn}}  \mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}}
+
+
+
+pour encapsuler des matrices dynamiques de chaînes avec les lignes, colonnes et nb colonnes avant les candidats. 
+
+Définit le type t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn comme struct \mbox{\hyperlink{structs__mat__char__dyn}{s\+\_\+mat\+\_\+char\+\_\+dyn}} \mbox{\Hypertarget{global_8h_afbda29014eac4aef9f13b911074e4cf1}\label{global_8h_afbda29014eac4aef9f13b911074e4cf1}} 
+\index{global.\+h@{global.\+h}!t\+\_\+mat\+\_\+int\+\_\+dyn@{t\+\_\+mat\+\_\+int\+\_\+dyn}}
+\index{t\+\_\+mat\+\_\+int\+\_\+dyn@{t\+\_\+mat\+\_\+int\+\_\+dyn}!global.\+h@{global.\+h}}
+\subsubsection{\texorpdfstring{t\+\_\+mat\+\_\+int\+\_\+dyn}{t\_mat\_int\_dyn}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__mat__dyn}{s\+\_\+mat\+\_\+dyn}}  \mbox{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}}}
+
+
+
+pour encapsuler des matrices dynamiques d\textquotesingle{}entiers avec les lignes et colonnes. 
+
+Définit le type t\+\_\+mat\+\_\+int\+\_\+dyn comme struct \mbox{\hyperlink{structs__mat__dyn}{s\+\_\+mat\+\_\+dyn}} \mbox{\Hypertarget{global_8h_a71b518557f21194cba30d4f780d93055}\label{global_8h_a71b518557f21194cba30d4f780d93055}} 
+\index{global.\+h@{global.\+h}!t\+\_\+tab\+\_\+int\+\_\+dyn@{t\+\_\+tab\+\_\+int\+\_\+dyn}}
+\index{t\+\_\+tab\+\_\+int\+\_\+dyn@{t\+\_\+tab\+\_\+int\+\_\+dyn}!global.\+h@{global.\+h}}
+\subsubsection{\texorpdfstring{t\+\_\+tab\+\_\+int\+\_\+dyn}{t\_tab\_int\_dyn}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__tab__dyn}{s\+\_\+tab\+\_\+dyn}}  \mbox{\hyperlink{global_8h_a71b518557f21194cba30d4f780d93055}{t\+\_\+tab\+\_\+int\+\_\+dyn}}}
+
+
+
+pour encapsuler des tableaux dynamiques d\textquotesingle{}entiers avec la dimension. 
+
+Définit le type t\+\_\+tab\+\_\+int\+\_\+dyn comme struct \mbox{\hyperlink{structs__tab__dyn}{s\+\_\+tab\+\_\+dyn}} 

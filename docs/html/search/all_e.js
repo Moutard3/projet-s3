@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['t_5farc_5fp',['t_arc_p',['../global_8h.html#a6481fa2d5db097a85ff5fe162c14068a',1,'global.h']]],
-  ['tabliste',['Tabliste',['../structliste.html#a5306c3d8ec2ffff7bc66e76132cc395e',1,'liste']]],
-  ['taillist',['tailList',['../liste_8c.html#a952b7b53e6a0bf83ed77b30f56039cd3',1,'tailList(liste p, Elementliste *e):&#160;liste.c'],['../liste_8h.html#a952b7b53e6a0bf83ed77b30f56039cd3',1,'tailList(liste p, Elementliste *e):&#160;liste.c']]],
-  ['tete',['Tete',['../structliste.html#ac27f6a14865441ed2e343acc6738aad2',1,'liste']]]
+  ['s_5farc_5fp',['s_arc_p',['../structs__arc__p.html',1,'']]],
+  ['s_5fmat_5fchar_5fdyn',['s_mat_char_dyn',['../structs__mat__char__dyn.html',1,'']]],
+  ['s_5fmat_5fdyn',['s_mat_dyn',['../structs__mat__dyn.html',1,'']]],
+  ['s_5ftab_5fdyn',['s_tab_dyn',['../structs__tab__dyn.html',1,'']]],
+  ['saisie_5felement',['saisie_element',['../elementliste_8c.html#a5654b1c44f989f6223edfc1ef6606a35',1,'saisie_element(Elementliste *e):&#160;elementliste.c'],['../elementliste_8h.html#a5654b1c44f989f6223edfc1ef6606a35',1,'saisie_element(Elementliste *e):&#160;elementliste.c']]],
+  ['swapeltlist',['swapEltList',['../liste_8c.html#aab2683342bb0aca5e45f6990a33301ac',1,'swapEltList(Elementliste *a, Elementliste *b):&#160;liste.c'],['../liste_8h.html#aab2683342bb0aca5e45f6990a33301ac',1,'swapEltList(Elementliste *a, Elementliste *b):&#160;liste.c']]]
 ];

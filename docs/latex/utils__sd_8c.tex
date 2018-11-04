@@ -1,0 +1,288 @@
+\hypertarget{utils__sd_8c}{}\section{Référence du fichier src/utils\+\_\+sd.c}
+\label{utils__sd_8c}\index{src/utils\+\_\+sd.\+c@{src/utils\+\_\+sd.\+c}}
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}utils\+\_\+sd.\+h\char`\"{}}\newline
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{utils__sd_8c_afaddb0e6171eb3627132656b7bbfc186}{creer\+\_\+tab\+\_\+int}} (int dim)
+\begin{DoxyCompactList}\small\item\em Crée un tableau d\textquotesingle{}entiers. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \mbox{\hyperlink{utils__sd_8c_a9248ee8ac2f581c40995375a17dcad39}{creer\+\_\+mat\+\_\+int}} (int nb\+Rows, int nb\+Col)
+\begin{DoxyCompactList}\small\item\em Crée une matrice d\textquotesingle{}entiers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a56e7e1e1bace7d9a1e45a5eec5edbef6}{affiche\+\_\+tab\+\_\+int}} (int $\ast$tab, int dim, F\+I\+LE $\ast$logfp)
+\begin{DoxyCompactList}\small\item\em Affiche un tableau d\textquotesingle{}entiers dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a0c2f4bf1b114391cb819274896104a0e}{affiche\+\_\+mat\+\_\+int}} (int $\ast$$\ast$duels\+\_\+mat, int nb\+Rows, int nb\+Col, F\+I\+LE $\ast$logfp)
+\begin{DoxyCompactList}\small\item\em Affiche une matrice d\textquotesingle{}entiers dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_ae4c296adb52aa81c3889c3880b7bcff2}{creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn}} (\mbox{\hyperlink{global_8h_a71b518557f21194cba30d4f780d93055}{t\+\_\+tab\+\_\+int\+\_\+dyn}} $\ast$st\+Tab, int dim)
+\begin{DoxyCompactList}\small\item\em Crée un t\+\_\+tab\+\_\+int\+\_\+dyn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a72eaf01807f248f44d7afdc1f9055b7c}{creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn}} (\mbox{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$st\+Tab, int nb\+Rows, int nb\+Col)
+\begin{DoxyCompactList}\small\item\em Crée un t\+\_\+mat\+\_\+int\+\_\+dyn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_afc7ce49692349962614d37b169415619}{creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn}} (\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$s\+\_\+tabmots)
+\begin{DoxyCompactList}\small\item\em Crée un t\+\_\+mat\+\_\+char\+\_\+dyn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a540746e1dd10fe900c6acddcfb7d26b6}{affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn}} (\mbox{\hyperlink{global_8h_a71b518557f21194cba30d4f780d93055}{t\+\_\+tab\+\_\+int\+\_\+dyn}} t\+\_\+tab, F\+I\+LE $\ast$logfp)
+\begin{DoxyCompactList}\small\item\em Affiche un t\+\_\+tab\+\_\+int\+\_\+dyn dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a2a5de127c5fc987fc1207835707f65a4}{affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn}} (\mbox{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}} t\+\_\+tab, F\+I\+LE $\ast$logfp)
+\begin{DoxyCompactList}\small\item\em Affiche un t\+\_\+mat\+\_\+int\+\_\+dyn dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_aec48dc5361c3f0587263edda1f51723c}{affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} (\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} t\+\_\+tabmots, F\+I\+LE $\ast$logfp)
+\begin{DoxyCompactList}\small\item\em Affiche un t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a941a572f313edd85907218084b61371a}{init\+\_\+tab\+\_\+int}} (int $\ast$tab, int dim, int valeur)
+\begin{DoxyCompactList}\small\item\em Initialise un tableau d\textquotesingle{}entiers avec une valeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a48718f42e674f032d418d56d9586a2bf}{init\+\_\+mat\+\_\+int}} (int $\ast$$\ast$mat, int nb\+Rows, int nb\+Col, int valeur)
+\begin{DoxyCompactList}\small\item\em Initialise une matrice d\textquotesingle{}entiers avec une valeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils__sd_8c_a78a6e22a5f2bb156af0bb20cf6f7a2c8}{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}} (F\+I\+LE $\ast$csvfp, \mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$tabmots, char separator, int offset)
+\begin{DoxyCompactList}\small\item\em Initialise un t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn avec un C\+SV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Alexandre Saillet 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+CR\+: 02/11/2018 
+
+LU\+: 04/11/2018 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{utils__sd_8c_a0c2f4bf1b114391cb819274896104a0e}\label{utils__sd_8c_a0c2f4bf1b114391cb819274896104a0e}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!affiche\+\_\+mat\+\_\+int@{affiche\+\_\+mat\+\_\+int}}
+\index{affiche\+\_\+mat\+\_\+int@{affiche\+\_\+mat\+\_\+int}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+mat\+\_\+int()}{affiche\_mat\_int()}}
+{\footnotesize\ttfamily void affiche\+\_\+mat\+\_\+int (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{duels\+\_\+mat,  }\item[{int}]{nb\+Rows,  }\item[{int}]{nb\+Col,  }\item[{F\+I\+LE $\ast$}]{logfp }\end{DoxyParamCaption})}
+
+
+
+Affiche une matrice d\textquotesingle{}entiers dans un fichier. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em duels\+\_\+mat} & \+: La matrice \\
+\hline
+\mbox{\tt in}  & {\em nb\+Rows} & \+: Le nombre de lignes \\
+\hline
+\mbox{\tt in}  & {\em nb\+Col} & \+: Le nombre de colonnes \\
+\hline
+\mbox{\tt in}  & {\em logfp} & \+: Le fichier où afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_aec48dc5361c3f0587263edda1f51723c}\label{utils__sd_8c_aec48dc5361c3f0587263edda1f51723c}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn@{affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}
+\index{affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn@{affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn()}{affiche\_t\_mat\_char\_star\_dyn()}}
+{\footnotesize\ttfamily void affiche\+\_\+t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}}]{t\+\_\+tabmots,  }\item[{F\+I\+LE $\ast$}]{logfp }\end{DoxyParamCaption})}
+
+
+
+Affiche un t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn dans un fichier. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em t\+\_\+tabmots} & \+: Le t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn à afficher \\
+\hline
+\mbox{\tt in}  & {\em logfp} & \+: Le fichier où afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a2a5de127c5fc987fc1207835707f65a4}\label{utils__sd_8c_a2a5de127c5fc987fc1207835707f65a4}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn@{affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn}}
+\index{affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn@{affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn()}{affiche\_t\_mat\_int\_dyn()}}
+{\footnotesize\ttfamily void affiche\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}}}]{t\+\_\+tab,  }\item[{F\+I\+LE $\ast$}]{logfp }\end{DoxyParamCaption})}
+
+
+
+Affiche un t\+\_\+mat\+\_\+int\+\_\+dyn dans un fichier. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em t\+\_\+tab} & \+: Le t\+\_\+mat\+\_\+int\+\_\+dyn à afficher \\
+\hline
+\mbox{\tt in}  & {\em logfp} & \+: Le fichier où afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a540746e1dd10fe900c6acddcfb7d26b6}\label{utils__sd_8c_a540746e1dd10fe900c6acddcfb7d26b6}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn@{affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn}}
+\index{affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn@{affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn()}{affiche\_t\_tab\_int\_dyn()}}
+{\footnotesize\ttfamily void affiche\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_a71b518557f21194cba30d4f780d93055}{t\+\_\+tab\+\_\+int\+\_\+dyn}}}]{t\+\_\+tab,  }\item[{F\+I\+LE $\ast$}]{logfp }\end{DoxyParamCaption})}
+
+
+
+Affiche un t\+\_\+tab\+\_\+int\+\_\+dyn dans un fichier. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em t\+\_\+tab} & \+: Le t\+\_\+tab\+\_\+int\+\_\+dyn à afficher \\
+\hline
+\mbox{\tt in}  & {\em logfp} & \+: Le ficher où afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a56e7e1e1bace7d9a1e45a5eec5edbef6}\label{utils__sd_8c_a56e7e1e1bace7d9a1e45a5eec5edbef6}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!affiche\+\_\+tab\+\_\+int@{affiche\+\_\+tab\+\_\+int}}
+\index{affiche\+\_\+tab\+\_\+int@{affiche\+\_\+tab\+\_\+int}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+tab\+\_\+int()}{affiche\_tab\_int()}}
+{\footnotesize\ttfamily void affiche\+\_\+tab\+\_\+int (\begin{DoxyParamCaption}\item[{int $\ast$}]{tab,  }\item[{int}]{dim,  }\item[{F\+I\+LE $\ast$}]{logfp }\end{DoxyParamCaption})}
+
+
+
+Affiche un tableau d\textquotesingle{}entiers dans un fichier. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em tab} & \+: Le tableau d\textquotesingle{}entiers \\
+\hline
+\mbox{\tt in}  & {\em dim} & \+: La dimension du tableau \\
+\hline
+\mbox{\tt in}  & {\em logfp} & \+: Le fichier où afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a9248ee8ac2f581c40995375a17dcad39}\label{utils__sd_8c_a9248ee8ac2f581c40995375a17dcad39}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!creer\+\_\+mat\+\_\+int@{creer\+\_\+mat\+\_\+int}}
+\index{creer\+\_\+mat\+\_\+int@{creer\+\_\+mat\+\_\+int}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{creer\+\_\+mat\+\_\+int()}{creer\_mat\_int()}}
+{\footnotesize\ttfamily int$\ast$$\ast$ creer\+\_\+mat\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{nb\+Rows,  }\item[{int}]{nb\+Col }\end{DoxyParamCaption})}
+
+
+
+Crée une matrice d\textquotesingle{}entiers. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em nb\+Rows} & \+: Nombre de lignes \\
+\hline
+\mbox{\tt in}  & {\em nb\+Col} & \+: Nombre de colonnes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int$\ast$$\ast$ matrice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils__sd_8c_afc7ce49692349962614d37b169415619}\label{utils__sd_8c_afc7ce49692349962614d37b169415619}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn@{creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn}}
+\index{creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn@{creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn()}{creer\_t\_mat\_char\_dyn()}}
+{\footnotesize\ttfamily void creer\+\_\+t\+\_\+mat\+\_\+char\+\_\+dyn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{s\+\_\+tabmots }\end{DoxyParamCaption})}
+
+
+
+Crée un t\+\_\+mat\+\_\+char\+\_\+dyn. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em s\+\_\+tabmots} & \+: Le t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a72eaf01807f248f44d7afdc1f9055b7c}\label{utils__sd_8c_a72eaf01807f248f44d7afdc1f9055b7c}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn@{creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn}}
+\index{creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn@{creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn()}{creer\_t\_mat\_int\_dyn()}}
+{\footnotesize\ttfamily void creer\+\_\+t\+\_\+mat\+\_\+int\+\_\+dyn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{st\+Tab,  }\item[{int}]{nb\+Rows,  }\item[{int}]{nb\+Col }\end{DoxyParamCaption})}
+
+
+
+Crée un t\+\_\+mat\+\_\+int\+\_\+dyn. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em st\+Tab} & \+: Le t\+\_\+mat\+\_\+int\+\_\+dyn \\
+\hline
+\mbox{\tt in}  & {\em nb\+Rows} & \+: Le nombre de lignes \\
+\hline
+\mbox{\tt in}  & {\em nb\+Col} & \+: Le nombre de colonnes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_ae4c296adb52aa81c3889c3880b7bcff2}\label{utils__sd_8c_ae4c296adb52aa81c3889c3880b7bcff2}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn@{creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn}}
+\index{creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn@{creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn()}{creer\_t\_tab\_int\_dyn()}}
+{\footnotesize\ttfamily void creer\+\_\+t\+\_\+tab\+\_\+int\+\_\+dyn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_a71b518557f21194cba30d4f780d93055}{t\+\_\+tab\+\_\+int\+\_\+dyn}} $\ast$}]{st\+Tab,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Crée un t\+\_\+tab\+\_\+int\+\_\+dyn. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em st\+Tab} & \+: Le t\+\_\+tab\+\_\+int\+\_\+dyn \\
+\hline
+\mbox{\tt in}  & {\em dim} & \+: La dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_afaddb0e6171eb3627132656b7bbfc186}\label{utils__sd_8c_afaddb0e6171eb3627132656b7bbfc186}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!creer\+\_\+tab\+\_\+int@{creer\+\_\+tab\+\_\+int}}
+\index{creer\+\_\+tab\+\_\+int@{creer\+\_\+tab\+\_\+int}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{creer\+\_\+tab\+\_\+int()}{creer\_tab\_int()}}
+{\footnotesize\ttfamily int$\ast$ creer\+\_\+tab\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Crée un tableau d\textquotesingle{}entiers. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em dim} & \+: Dimension du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int$\ast$ tableau 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils__sd_8c_a78a6e22a5f2bb156af0bb20cf6f7a2c8}\label{utils__sd_8c_a78a6e22a5f2bb156af0bb20cf6f7a2c8}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn@{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}}
+\index{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn@{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn()}{csv\_to\_t\_tab\_mat\_str\_dyn()}}
+{\footnotesize\ttfamily void csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{csvfp,  }\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{tabmots,  }\item[{char}]{separator,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+
+
+Initialise un t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn avec un C\+SV. 
+
+Alloue la place nécessaire dans un t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn d\textquotesingle{}après le contenu d\textquotesingle{}un C\+SV et le remplis avec ce dernier. La ligne 0 du tableau sera la ligne d\textquotesingle{}en-\/tête du C\+SV. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em csvfp} & \+: Le fichier C\+SV \\
+\hline
+\mbox{\tt out}  & {\em tabmots} & \+: Le t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn \\
+\hline
+\mbox{\tt in}  & {\em separator} & \+: Le séparateur entre les colonnes du C\+SV \\
+\hline
+\mbox{\tt in}  & {\em offset} & \+: Le nombre de colonne avec celle des candidats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a48718f42e674f032d418d56d9586a2bf}\label{utils__sd_8c_a48718f42e674f032d418d56d9586a2bf}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!init\+\_\+mat\+\_\+int@{init\+\_\+mat\+\_\+int}}
+\index{init\+\_\+mat\+\_\+int@{init\+\_\+mat\+\_\+int}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+mat\+\_\+int()}{init\_mat\_int()}}
+{\footnotesize\ttfamily void init\+\_\+mat\+\_\+int (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{mat,  }\item[{int}]{nb\+Rows,  }\item[{int}]{nb\+Col,  }\item[{int}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Initialise une matrice d\textquotesingle{}entiers avec une valeur. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em mat} & \+: La matrice d\textquotesingle{}entiers \\
+\hline
+\mbox{\tt in}  & {\em nb\+Rows} & \+: Le nombre de lignes \\
+\hline
+\mbox{\tt in}  & {\em nb\+Col} & \+: Le nombre de colonnes \\
+\hline
+\mbox{\tt in}  & {\em valeur} & \+: La valeur avec laquelle initialiser \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils__sd_8c_a941a572f313edd85907218084b61371a}\label{utils__sd_8c_a941a572f313edd85907218084b61371a}} 
+\index{utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}!init\+\_\+tab\+\_\+int@{init\+\_\+tab\+\_\+int}}
+\index{init\+\_\+tab\+\_\+int@{init\+\_\+tab\+\_\+int}!utils\+\_\+sd.\+c@{utils\+\_\+sd.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+tab\+\_\+int()}{init\_tab\_int()}}
+{\footnotesize\ttfamily void init\+\_\+tab\+\_\+int (\begin{DoxyParamCaption}\item[{int $\ast$}]{tab,  }\item[{int}]{dim,  }\item[{int}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Initialise un tableau d\textquotesingle{}entiers avec une valeur. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em tab} & \+: Le tableau d\textquotesingle{}entiers \\
+\hline
+\mbox{\tt in}  & {\em dim} & \+: La dimension du tableau \\
+\hline
+\mbox{\tt in}  & {\em valeur} & \+: La valeur avec laquelle initialiser \\
+\hline
+\end{DoxyParams}

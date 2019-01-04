@@ -159,7 +159,6 @@ void init_mat_int(int **mat,int nbRows,int nbCol,int valeur) {
  * @param[in] csvfp : Le fichier CSV
  * @param[out] tabmots : Le t_tab_mat_str_dyn
  * @param[in] separator : Le séparateur entre les colonnes du CSV
- * @param[in] offset : Le nombre de colonne avec celle des candidats
  */
 void csv_to_t_tab_mat_str_dyn(FILE *csvfp, t_mat_char_star_dyn * tabmots, char separator) {
     char line[1024];

@@ -13,10 +13,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/*
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))
-*/
 
 /// Arc pondéré
 typedef struct s_arc_p{
@@ -46,5 +44,6 @@ typedef struct s_mat_char_dyn{
     int offset; ///< Nombre de colonnes avant celles des candidats
 } t_mat_char_star_dyn; ///< Définit le type t_mat_char_star_dyn comme struct s_mat_char_dyn
 
+typedef enum {UNI1=0, UNI2=1, CM=2, CP=3, CS=4, VA=5} t_enum_methodes;
 
 #endif //PROJET_S3_GLOBAL_H

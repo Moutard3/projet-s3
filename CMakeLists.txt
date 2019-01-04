@@ -13,4 +13,4 @@ add_executable(projet_s3
         src/liste.h
         src/main.c
         src/utils_sd.c
-        src/utils_sd.h)
+        src/utils_sd.h src/uninomiales.c src/uninomiales.h)

@@ -10,8 +10,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "global.h"
 #include "liste.h"
 #include "utils_sd.h"
+#include "uninomiales.h"
 
 /**
  * @brief Entrée du programme
@@ -21,6 +23,9 @@
 int main(int argc, char* argv[]) {
     int fileType = -1;
     char* filePath = "";
+
+    t_enum_methodes methodes[6];
+    int nbMethodes = 0;
     for (int i = 1; i < argc; i++) {
         // -i ou -d déjà présent
         if ((strcmp(argv[i], "-i") == 0 || strcmp(argv[i], "-d") == 0) && fileType != -1) {
@@ -45,9 +50,20 @@ int main(int argc, char* argv[]) {
 
         }
 
-        // TODO: -m
         else if (strcmp(argv[i], "-m") == 0) {
-
+            if (strcmp(argv[i + 1], "uni1") == 0) {
+                methodes[nbMethodes++] = UNI1;
+            } else if (strcmp(argv[i + 1], "uni2") == 0) {
+                methodes[nbMethodes++] = UNI2;
+            } else if (strcmp(argv[i + 1], "cm") == 0) {
+                methodes[nbMethodes++] = CM;
+            } else if (strcmp(argv[i + 1], "cp") == 0) {
+                methodes[nbMethodes++] = CP;
+            } else if (strcmp(argv[i + 1], "cs") == 0) {
+                methodes[nbMethodes++] = CS;
+            } else if (strcmp(argv[i + 1], "va") == 0) {
+                methodes[nbMethodes++] = VA;
+            }
         }
     }
 
@@ -70,18 +86,17 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-
     // Lit le CSV
     t_mat_char_star_dyn matcsv;
     creer_t_mat_char_dyn(&matcsv);
     csv_to_t_tab_mat_str_dyn(filep, &matcsv, '\t');
-    affiche_t_mat_char_star_dyn(matcsv, stdout);
+    //affiche_t_mat_char_star_dyn(matcsv, stdout);
 
     // Créer matrice des duels
     t_mat_int_dyn matduel;
     // -i
     if (fileType == 1) {
-        matcsv.offset = 5;
+        matcsv.offset = 3;
         // TODO
     }
     // -d
@@ -98,8 +113,27 @@ int main(int argc, char* argv[]) {
             b=0;
         }
         printf("\n");
-        affiche_t_mat_int_dyn(matduel, stdout);
+        //affiche_t_mat_int_dyn(matduel, stdout);
     }
+
+    for (int i = 0; i < nbMethodes; i++) {
+        if (methodes[i] == UNI1) {
+            int *votes = creer_tab_int(matcsv.nbCol-matcsv.offset);
+            int indVainqueur;
+
+            printf("\nUNINOMIALE SIMPLE:\n");
+            uninomiale_simple(matcsv, votes, &indVainqueur);
+            printf("Mode de scrutin: %s, %d candidats, %d votants, vaiqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
+        }
+    }
+
+    int *votes = creer_tab_int(matcsv.nbCol-matcsv.offset);
+    int indVainqueur;
+
+    uninomiale_double(matcsv, votes, &indVainqueur);
+    printf("Mode de scrutin: %s, %d candidats, %d votants, vaiqueur = %s, score = %d%%\n", "Uninomiale à deux tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
+
+
 }
 
 /**

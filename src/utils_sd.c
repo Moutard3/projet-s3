@@ -42,6 +42,7 @@ void affiche_tab_int(int *tab,int dim, FILE *logfp) {
     for (int i=0; i<dim; i++) {
         fprintf(logfp, "%d\t", *(tab+i));
     }
+    fprintf(logfp, "\n");
 }
 
 /**
@@ -54,7 +55,6 @@ void affiche_tab_int(int *tab,int dim, FILE *logfp) {
 void affiche_mat_int(int **duels_mat,int nbRows,int nbCol,FILE *logfp) {
     for (int i=0; i<nbRows; i++) {
         affiche_tab_int(*(duels_mat+i), nbCol, logfp);
-        fprintf(logfp, "\n");
     }
 }
 

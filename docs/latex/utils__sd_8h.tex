@@ -33,7 +33,7 @@ void \mbox{\hyperlink{utils__sd_8h_a941a572f313edd85907218084b61371a}{init\+\_\+
 \begin{DoxyCompactList}\small\item\em Initialise un tableau d\textquotesingle{}entiers avec une valeur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{utils__sd_8h_a48718f42e674f032d418d56d9586a2bf}{init\+\_\+mat\+\_\+int}} (int $\ast$$\ast$mat, int nb\+Rows, int nb\+Col, int valeur)
 \begin{DoxyCompactList}\small\item\em Initialise une matrice d\textquotesingle{}entiers avec une valeur. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{utils__sd_8h_a78a6e22a5f2bb156af0bb20cf6f7a2c8}{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}} (F\+I\+LE $\ast$csvfp, \mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$tabmots, char separator, int offset)
+void \mbox{\hyperlink{utils__sd_8h_a4fdbc99e4b55d2aabe33affda372ff01}{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}} (F\+I\+LE $\ast$csvfp, \mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$tabmots, char separator)
 \begin{DoxyCompactList}\small\item\em Initialise un t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn avec un C\+SV. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -231,11 +231,11 @@ Crée un tableau d\textquotesingle{}entiers.
 \begin{DoxyReturn}{Renvoie}
 int$\ast$ tableau 
 \end{DoxyReturn}
-\mbox{\Hypertarget{utils__sd_8h_a78a6e22a5f2bb156af0bb20cf6f7a2c8}\label{utils__sd_8h_a78a6e22a5f2bb156af0bb20cf6f7a2c8}} 
+\mbox{\Hypertarget{utils__sd_8h_a4fdbc99e4b55d2aabe33affda372ff01}\label{utils__sd_8h_a4fdbc99e4b55d2aabe33affda372ff01}} 
 \index{utils\+\_\+sd.\+h@{utils\+\_\+sd.\+h}!csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn@{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}}
 \index{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn@{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn}!utils\+\_\+sd.\+h@{utils\+\_\+sd.\+h}}
 \subsubsection{\texorpdfstring{csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn()}{csv\_to\_t\_tab\_mat\_str\_dyn()}}
-{\footnotesize\ttfamily void csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{csvfp,  }\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{tabmots,  }\item[{char}]{separator,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void csv\+\_\+to\+\_\+t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{csvfp,  }\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{tabmots,  }\item[{char}]{separator }\end{DoxyParamCaption})}
 
 
 
@@ -248,8 +248,6 @@ Alloue la place nécessaire dans un t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn d\text
 \mbox{\tt out}  & {\em tabmots} & \+: Le t\+\_\+tab\+\_\+mat\+\_\+str\+\_\+dyn \\
 \hline
 \mbox{\tt in}  & {\em separator} & \+: Le séparateur entre les colonnes du C\+SV \\
-\hline
-\mbox{\tt in}  & {\em offset} & \+: Le nombre de colonne avec celle des candidats \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{utils__sd_8h_a48718f42e674f032d418d56d9586a2bf}\label{utils__sd_8h_a48718f42e674f032d418d56d9586a2bf}} 

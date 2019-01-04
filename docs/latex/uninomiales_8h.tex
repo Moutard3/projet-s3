@@ -1,0 +1,79 @@
+\hypertarget{uninomiales_8h}{}\section{Référence du fichier src/uninomiales.h}
+\label{uninomiales_8h}\index{src/uninomiales.\+h@{src/uninomiales.\+h}}
+
+
+Méthodes de vote unimoniales.  
+
+
+{\ttfamily \#include \char`\"{}utils\+\_\+sd.\+h\char`\"{}}\newline
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uninomiales_8h_a8f23f0f7897d612ed3fafa6e3bac5bdb}{uninomiale\+\_\+simple}} (\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} matcsv, int $\ast$votes, int $\ast$ind\+Vainqueur, int $\ast$blanc)
+\begin{DoxyCompactList}\small\item\em Effectue un vote uninomiale à un tour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uninomiales_8h_ac0a03ed36b267a59b8482a49a503f40a}{uninomiale\+\_\+double}} (\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} matcsv, int $\ast$votes\+T1, int $\ast$ind\+Vainqueur1, int $\ast$ind\+Vainqueur2, int $\ast$votes\+T2, int $\ast$ind\+Vainqueur, int $\ast$blanc)
+\begin{DoxyCompactList}\small\item\em Effectue un vote uninomiale à deux tours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Méthodes de vote unimoniales. 
+
+\begin{DoxyAuthor}{Auteur}
+Alexandre Saillet 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+CR\+: 04/01/2019 
+
+LU\+: 04/01/2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{uninomiales_8h_ac0a03ed36b267a59b8482a49a503f40a}\label{uninomiales_8h_ac0a03ed36b267a59b8482a49a503f40a}} 
+\index{uninomiales.\+h@{uninomiales.\+h}!uninomiale\+\_\+double@{uninomiale\+\_\+double}}
+\index{uninomiale\+\_\+double@{uninomiale\+\_\+double}!uninomiales.\+h@{uninomiales.\+h}}
+\subsubsection{\texorpdfstring{uninomiale\+\_\+double()}{uninomiale\_double()}}
+{\footnotesize\ttfamily void uninomiale\+\_\+double (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}}]{matcsv,  }\item[{int $\ast$}]{votes\+T1,  }\item[{int $\ast$}]{ind\+Vainqueur1,  }\item[{int $\ast$}]{ind\+Vainqueur2,  }\item[{int $\ast$}]{votes\+T2,  }\item[{int $\ast$}]{ind\+Vainqueur,  }\item[{int $\ast$}]{blanc }\end{DoxyParamCaption})}
+
+
+
+Effectue un vote uninomiale à deux tours. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em matcsv} & \+: Matrice des ballots \\
+\hline
+{\em votes\+T1} & \+: Tableau du nombre de votes au tour un \\
+\hline
+{\em ind\+Vainqueur1} & \+: Indice du vainqueur un au tour un (relatif au tableau votes\+T1) \\
+\hline
+{\em ind\+Vainqueur2} & \+: Indice du vainqueur deux au tour un (relatif au tableau votes\+T1) \\
+\hline
+{\em votes\+T2} & \+: Tableau du nombre de votes au tour deux \\
+\hline
+{\em ind\+Vainqueur} & \+: Indice du vainqueur du vote ( = vainqueur du tour 2, relatif au tableau votes\+T2) \\
+\hline
+{\em blanc} & \+: Nombre de votes blancs au tour 1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uninomiales_8h_a8f23f0f7897d612ed3fafa6e3bac5bdb}\label{uninomiales_8h_a8f23f0f7897d612ed3fafa6e3bac5bdb}} 
+\index{uninomiales.\+h@{uninomiales.\+h}!uninomiale\+\_\+simple@{uninomiale\+\_\+simple}}
+\index{uninomiale\+\_\+simple@{uninomiale\+\_\+simple}!uninomiales.\+h@{uninomiales.\+h}}
+\subsubsection{\texorpdfstring{uninomiale\+\_\+simple()}{uninomiale\_simple()}}
+{\footnotesize\ttfamily void uninomiale\+\_\+simple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}}]{matcsv,  }\item[{int $\ast$}]{votes,  }\item[{int $\ast$}]{ind\+Vainqueur,  }\item[{int $\ast$}]{blanc }\end{DoxyParamCaption})}
+
+
+
+Effectue un vote uninomiale à un tour. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em matcsv} & \+: Matrice des ballots \\
+\hline
+\mbox{\tt out}  & {\em votes} & \+: Tableau des nombres de votes \\
+\hline
+\mbox{\tt out}  & {\em ind\+Vainqueur} & \+: Indicde du vainqueur (relatif au tableau votes) \\
+\hline
+\mbox{\tt out}  & {\em blanc} & \+: Nombre de votes blanc \\
+\hline
+\end{DoxyParams}

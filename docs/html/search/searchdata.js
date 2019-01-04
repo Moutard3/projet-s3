@@ -3,10 +3,11 @@ var indexSectionsWithContent =
   0: "abcdefghilmnopstuv",
   1: "ls",
   2: "eglmu",
-  3: "abcdefhimnpst",
+  3: "abcdefhimnpstu",
   4: "dnopt",
   5: "elt",
-  6: "dv"
+  6: "t",
+  7: "dv"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "defines"
+  6: "enums",
+  7: "defines"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Fonctions",
   4: "Variables",
   5: "Définitions de type",
-  6: "Macros"
+  6: "Énumérations",
+  7: "Macros"
 };
 

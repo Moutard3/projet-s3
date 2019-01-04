@@ -112,15 +112,15 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a48718f42e674f032d418d56d9586a2bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__sd_8c.html#a48718f42e674f032d418d56d9586a2bf">init_mat_int</a> (int **mat, int nbRows, int nbCol, int valeur)</td></tr>
 <tr class="memdesc:a48718f42e674f032d418d56d9586a2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise une matrice d'entiers avec une valeur.  <a href="#a48718f42e674f032d418d56d9586a2bf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a48718f42e674f032d418d56d9586a2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78a6e22a5f2bb156af0bb20cf6f7a2c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__sd_8c.html#a78a6e22a5f2bb156af0bb20cf6f7a2c8">csv_to_t_tab_mat_str_dyn</a> (FILE *csvfp, <a class="el" href="global_8h.html#a6246790d2f4187545380406f21036c05">t_mat_char_star_dyn</a> *tabmots, char separator, int offset)</td></tr>
-<tr class="memdesc:a78a6e22a5f2bb156af0bb20cf6f7a2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise un t_tab_mat_str_dyn avec un CSV.  <a href="#a78a6e22a5f2bb156af0bb20cf6f7a2c8">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a78a6e22a5f2bb156af0bb20cf6f7a2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fdbc99e4b55d2aabe33affda372ff01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__sd_8c.html#a4fdbc99e4b55d2aabe33affda372ff01">csv_to_t_tab_mat_str_dyn</a> (FILE *csvfp, <a class="el" href="global_8h.html#a6246790d2f4187545380406f21036c05">t_mat_char_star_dyn</a> *tabmots, char separator)</td></tr>
+<tr class="memdesc:a4fdbc99e4b55d2aabe33affda372ff01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise un t_tab_mat_str_dyn avec un CSV.  <a href="#a4fdbc99e4b55d2aabe33affda372ff01">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4fdbc99e4b55d2aabe33affda372ff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Alexandre Saillet </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>CR: 02/11/2018 </dd>
 <dd>
-LU: 04/11/2018 </dd></dl>
+LU: 04/01/2019 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a0c2f4bf1b114391cb819274896104a0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c2f4bf1b114391cb819274896104a0e">&#9670;&nbsp;</a></span>affiche_mat_int()</h2>
@@ -500,8 +500,8 @@ LU: 04/11/2018 </dd></dl>
 
 </div>
 </div>
-<a id="a78a6e22a5f2bb156af0bb20cf6f7a2c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78a6e22a5f2bb156af0bb20cf6f7a2c8">&#9670;&nbsp;</a></span>csv_to_t_tab_mat_str_dyn()</h2>
+<a id="a4fdbc99e4b55d2aabe33affda372ff01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fdbc99e4b55d2aabe33affda372ff01">&#9670;&nbsp;</a></span>csv_to_t_tab_mat_str_dyn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,13 +522,7 @@ LU: 04/11/2018 </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>separator</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>offset</em>&#160;</td>
+          <td class="paramname"><em>separator</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -544,7 +538,6 @@ LU: 04/11/2018 </dd></dl>
     <tr><td class="paramdir">[in]</td><td class="paramname">csvfp</td><td>: Le fichier CSV </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">tabmots</td><td>: Le t_tab_mat_str_dyn </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">separator</td><td>: Le séparateur entre les colonnes du CSV </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>: Le nombre de colonne avec celle des candidats </td></tr>
   </table>
   </dd>
 </dl>

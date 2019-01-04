@@ -26,6 +26,19 @@ typedef struct \mbox{\hyperlink{structs__mat__dyn}{s\+\_\+mat\+\_\+dyn}} \mbox{\
 \begin{DoxyCompactList}\small\item\em pour encapsuler des matrices dynamiques d\textquotesingle{}entiers avec les lignes et colonnes. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structs__mat__char__dyn}{s\+\_\+mat\+\_\+char\+\_\+dyn}} \mbox{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}
 \begin{DoxyCompactList}\small\item\em pour encapsuler des matrices dynamiques de chaînes avec les lignes, colonnes et nb colonnes avant les candidats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}{t\+\_\+enum\+\_\+methodes}} \{ \newline
+{\bfseries U\+N\+I1} =0, 
+{\bfseries U\+N\+I2} =1, 
+{\bfseries CM} =2, 
+{\bfseries CP} =3, 
+\newline
+{\bfseries CS} =4, 
+{\bfseries VA} =5
+ \}
+\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
@@ -79,3 +92,12 @@ Définit le type t\+\_\+mat\+\_\+int\+\_\+dyn comme struct \mbox{\hyperlink{stru
 pour encapsuler des tableaux dynamiques d\textquotesingle{}entiers avec la dimension. 
 
 Définit le type t\+\_\+tab\+\_\+int\+\_\+dyn comme struct \mbox{\hyperlink{structs__tab__dyn}{s\+\_\+tab\+\_\+dyn}} 
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\mbox{\Hypertarget{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}\label{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}} 
+\index{global.\+h@{global.\+h}!t\+\_\+enum\+\_\+methodes@{t\+\_\+enum\+\_\+methodes}}
+\index{t\+\_\+enum\+\_\+methodes@{t\+\_\+enum\+\_\+methodes}!global.\+h@{global.\+h}}
+\subsubsection{\texorpdfstring{t\+\_\+enum\+\_\+methodes}{t\_enum\_methodes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}{t\+\_\+enum\+\_\+methodes}}}
+
+Enum des methodes de vote possibles U\+N\+I1 \+: uninomiale à un tour U\+N\+I2 \+: uninomiale à deux tours CM \+: condorcet minmax CP \+: condorcet rangement des paires CS \+: condorcet Schulze VA \+: vote alternatif 

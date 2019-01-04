@@ -2,13 +2,18 @@
 \label{main_8c}\index{src/main.\+c@{src/main.\+c}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}liste.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utils\+\_\+sd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uninomiales.\+h\char`\"{}}\newline
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Entrée du programme. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a448da4cdb9515be4db08508bad4e3d97}\label{main_8c_a448da4cdb9515be4db08508bad4e3d97}} 
+void \mbox{\hyperlink{main_8c_a448da4cdb9515be4db08508bad4e3d97}{test\+\_\+lecture\+\_\+csv}} ()
+\begin{DoxyCompactList}\small\item\em Permet de tester la lecture d\textquotesingle{}un C\+SV. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}\label{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}} 
 void \mbox{\hyperlink{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}{test\+\_\+liste}} ()
 \begin{DoxyCompactList}\small\item\em Permet de tester les listes (de \mbox{\hyperlink{liste_8c}{liste.\+c}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -23,16 +28,16 @@ Alexandre Saillet
 \begin{DoxyDate}{Date}
 CR\+: 01/11/2018 
 
-LU\+: 04/11/2018 
+LU\+: 04/01/2019 
 \end{DoxyDate}
 
 
 \subsection{Documentation des fonctions}
-\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.\+c@{main.\+c}!main@{main}}
 \index{main@{main}!main.\+c@{main.\+c}}
 \subsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -40,4 +45,6 @@ Entrée du programme.
 
 \begin{DoxyReturn}{Renvoie}
 E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS Arrêt normal du programme 
+
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE Erreur d\textquotesingle{}argument dans l\textquotesingle{}appel du programme 
 \end{DoxyReturn}

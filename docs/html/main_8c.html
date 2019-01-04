@@ -73,14 +73,20 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="liste_8h_source.html">liste.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils__sd_8h_source.html">utils_sd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uninomiales_8h_source.html">uninomiales.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entrée du programme.  <a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entrée du programme.  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448da4cdb9515be4db08508bad4e3d97"><td class="memItemLeft" align="right" valign="top"><a id="a448da4cdb9515be4db08508bad4e3d97"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a448da4cdb9515be4db08508bad4e3d97">test_lecture_csv</a> ()</td></tr>
+<tr class="memdesc:a448da4cdb9515be4db08508bad4e3d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de tester la lecture d'un CSV. <br /></td></tr>
+<tr class="separator:a448da4cdb9515be4db08508bad4e3d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c776e682ff62700bedcb6e3dd43a8a0"><td class="memItemLeft" align="right" valign="top"><a id="a1c776e682ff62700bedcb6e3dd43a8a0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1c776e682ff62700bedcb6e3dd43a8a0">test_liste</a> ()</td></tr>
 <tr class="memdesc:a1c776e682ff62700bedcb6e3dd43a8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de tester les listes (de <a class="el" href="liste_8c.html">liste.c</a>) <br /></td></tr>
@@ -92,10 +98,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main
 Alexandre Saillet </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>CR: 01/11/2018 </dd>
 <dd>
-LU: 04/11/2018 </dd></dl>
+LU: 04/01/2019 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,14 +109,27 @@ LU: 04/11/2018 </dd></dl>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Entrée du programme. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>EXIT_SUCCESS Arrêt normal du programme </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>EXIT_SUCCESS Arrêt normal du programme </dd>
+<dd>
+EXIT_FAILURE Erreur d'argument dans l'appel du programme </dd></dl>
 
 </div>
 </div>

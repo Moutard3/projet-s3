@@ -8,6 +8,13 @@
 
 #include "uninomiales.h"
 
+/**
+ * @brief Effectue un vote uninomiale à un tour
+ * @param[in] matcsv : Matrice des ballots
+ * @param[out] votes : Tableau des nombres de votes
+ * @param[out] indVainqueur : Indicde du vainqueur (relatif au tableau votes)
+ * @param[out] blanc : Nombre de votes blanc
+ */
 void uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur, int *blanc) {
     int nbCandidats = matcsv.nbCol-matcsv.offset;
 
@@ -50,6 +57,16 @@ void uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur
     //affiche_tab_int(votes, nbCandidats, stdout);
 }
 
+/**
+ * @brief Effectue un vote uninomiale à deux tours
+ * @param matcsv : Matrice des ballots
+ * @param votesT1 : Tableau du nombre de votes au tour un
+ * @param indVainqueur1 : Indice du vainqueur un au tour un (relatif au tableau votesT1)
+ * @param indVainqueur2 : Indice du vainqueur deux au tour un (relatif au tableau votesT1)
+ * @param votesT2 : Tableau du nombre de votes au tour deux
+ * @param indVainqueur : Indice du vainqueur du vote ( = vainqueur du tour 2, relatif au tableau votesT2)
+ * @param blanc : Nombre de votes blancs au tour 1
+ */
 void uninomiale_double(t_mat_char_star_dyn matcsv, int *votesT1, int *indVainqueur1, int *indVainqueur2, int *votesT2, int *indVainqueur, int *blanc) {
     // Détermine le 1er vainqueur
     uninomiale_simple(matcsv, votesT1, indVainqueur1, blanc);

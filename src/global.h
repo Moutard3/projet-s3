@@ -13,8 +13,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+/*
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))
+ */
 
 /// Arc pondéré
 typedef struct s_arc_p{

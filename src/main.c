@@ -79,6 +79,18 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
+    // -m absent
+    if (nbMethodes == 0) {
+        methodes[nbMethodes++] = CM;
+        methodes[nbMethodes++] = CP;
+        methodes[nbMethodes++] = CS;
+        if (fileType == 1) {
+            methodes[nbMethodes++] = UNI1;
+            methodes[nbMethodes++] = UNI2;
+            methodes[nbMethodes++] = VA;
+        }
+    }
+
     FILE* filep = fopen(filePath, "r");
     // Le fichier n'a pas pu être ouvert
     if (!filep) {
@@ -119,21 +131,27 @@ int main(int argc, char* argv[]) {
     for (int i = 0; i < nbMethodes; i++) {
         if (methodes[i] == UNI1) {
             int *votes = creer_tab_int(matcsv.nbCol-matcsv.offset);
-            int indVainqueur;
+            int indVainqueur, blanc;
 
             printf("\nUNINOMIALE SIMPLE:\n");
-            uninomiale_simple(matcsv, votes, &indVainqueur);
-            printf("Mode de scrutin: %s, %d candidats, %d votants, vaiqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
+            uninomiale_simple(matcsv, votes, &indVainqueur, &blanc);
+            printf("Nombre de votes nuls pour uninominal : %d\n", blanc);
+            // Sans retirer les votes blancs des votes (comme dans res_uni1)
+            printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
+            // En retirant les votes blancs des votes:
+            // printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1-blanc));
+        } else if (methodes[i] == UNI2) {
+            int *votesT1 = creer_tab_int(matcsv.nbCol-matcsv.offset), *votesT2 = creer_tab_int(2);
+            int indVainqueur, indVainqueur1, indVainqueur2, blanc;
+
+            printf("\nUNINOMIALE DOUBLE:\n");
+            uninomiale_double(matcsv, votesT1, &indVainqueur1, &indVainqueur2, votesT2, &indVainqueur, &blanc);
+            printf("Nombre de votes nuls pour uninominal : %d\n", blanc);
+            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur1+matcsv.offset], (votesT1[indVainqueur1]*100)/(matcsv.nbRows-1));
+            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur2+matcsv.offset], (votesT1[indVainqueur2]*100)/(matcsv.nbRows-1));
+            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 2, 2, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votesT2[(indVainqueur == indVainqueur1)?(0):(1)]*100)/(matcsv.nbRows-1));
         }
     }
-
-    int *votes = creer_tab_int(matcsv.nbCol-matcsv.offset);
-    int indVainqueur;
-
-    uninomiale_double(matcsv, votes, &indVainqueur);
-    printf("Mode de scrutin: %s, %d candidats, %d votants, vaiqueur = %s, score = %d%%\n", "Uninomiale à deux tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
-
-
 }
 
 /**

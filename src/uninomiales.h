@@ -11,7 +11,7 @@
 
 #include "utils_sd.h"
 
-void uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur);
-void uninomiale_double(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur);
+void uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur, int *blanc);
+void uninomiale_double(t_mat_char_star_dyn matcsv, int *votesT1, int *indVainqueur1, int *indVainqueur2, int *votesT2, int *indVainqueur, int *blanc);
 
 #endif //PROJET_S3_UNINOMIALES_H

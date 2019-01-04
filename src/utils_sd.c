@@ -3,7 +3,7 @@
  * @brief 
  * @author Alexandre Saillet
  * @date CR: 02/11/2018
- * @date LU: 04/11/2018
+ * @date LU: 04/01/2019
  */
 
 #include <malloc.h>
@@ -40,7 +40,7 @@ int ** creer_mat_int(int nbRows,int nbCol) {
  */
 void affiche_tab_int(int *tab,int dim, FILE *logfp) {
     for (int i=0; i<dim; i++) {
-        fprintf(logfp, "%d", *(tab+i));
+        fprintf(logfp, "%d\t", *(tab+i));
     }
 }
 
@@ -54,6 +54,7 @@ void affiche_tab_int(int *tab,int dim, FILE *logfp) {
 void affiche_mat_int(int **duels_mat,int nbRows,int nbCol,FILE *logfp) {
     for (int i=0; i<nbRows; i++) {
         affiche_tab_int(*(duels_mat+i), nbCol, logfp);
+        fprintf(logfp, "\n");
     }
 }
 
@@ -160,10 +161,9 @@ void init_mat_int(int **mat,int nbRows,int nbCol,int valeur) {
  * @param[in] separator : Le séparateur entre les colonnes du CSV
  * @param[in] offset : Le nombre de colonne avec celle des candidats
  */
-void csv_to_t_tab_mat_str_dyn(FILE *csvfp, t_mat_char_star_dyn * tabmots, char separator, int offset) {
+void csv_to_t_tab_mat_str_dyn(FILE *csvfp, t_mat_char_star_dyn * tabmots, char separator) {
     char line[1024];
     bool firstline = true;
-    tabmots->offset = offset;
     while (fgets(line, 1024, csvfp)) {
         tabmots->tab = realloc(tabmots->tab, sizeof(char **) * ++tabmots->nbRows);
         tabmots->tab[tabmots->nbRows-1] = malloc(sizeof(char *) * tabmots->nbCol);

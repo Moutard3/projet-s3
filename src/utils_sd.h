@@ -26,6 +26,6 @@ void affiche_mat_int(int **duels_mat,int nbRows,int nbCol,FILE *logfp);
 void init_tab_int(int *tab,int dim,int valeur);// initialise avec une valeur
 void init_mat_int(int **mat,int nbRows,int nbCol,int valeur); // idem
 
-void csv_to_t_tab_mat_str_dyn(FILE *csvfp, t_mat_char_star_dyn * tabmots, char separator, int offset);
+void csv_to_t_tab_mat_str_dyn(FILE *csvfp, t_mat_char_star_dyn * tabmots, char separator);
 
 #endif //PROJET_S3_UTILS_SD_H

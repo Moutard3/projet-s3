@@ -21,87 +21,88 @@ int nbEltList(liste lst) {
  * @param[in] p : Liste
  */
 void createList(liste *p) {
-    p->Tete = -1;
+    p->Tete = 0;
     p->nbElt = 0;
 }
 
 /**
- * @brief Ajoute un élément à la fin (en haut) d'une liste
+ * @brief Ajoute un élément au début d'une liste
  * @param[in] p : Liste
  * @param[in] e : Element à ajouter
  */
 void addFrontList(liste *p, Elementliste e) {
     if (!fullList(*p)) {
-        copie_element(&p->Tabliste[++p->Tete], e);
+        if (p->Tete > 0) {
+            p->Tete--;
+        } else {
+            for (int i = nbEltList(*p) + 1; i > 0; i--) {
+                swapEltList(&p->Tabliste[i], &p->Tabliste[i - 1]);
+            }
+        }
+        copie_element(&p->Tabliste[p->Tete], e);
         p->nbElt++;
     }
 }
 
 /**
- * @brief Ajoute un élément au début (en bas) d'une liste
+ * @brief Ajoute un élément à la fin d'une liste
  * @param[in] p : Liste
  * @param[in] e : Element à ajouter
  */
 void addTailList(liste *p, Elementliste e) {
     if (!fullList(*p)) {
-        if (!emptyList(*p)) {
-            for (int i=nbEltList(*p); i>0; i--) {
-                swapEltList(&p->Tabliste[i], &p->Tabliste[i-1]);
+        if (p->Tete + p->nbElt == DIMMAX) {
+            for (int i = p->Tete-1; i < p->nbElt; i++) {
+                swapEltList(&p->Tabliste[i], &p->Tabliste[i + 1]);
             }
+            p->Tete--;
         }
-        copie_element(&p->Tabliste[0], e);
-        p->Tete++;
+        copie_element(&p->Tabliste[p->Tete+p->nbElt], e);
         p->nbElt++;
     }
 }
 
 /**
- * @brief Supprime le premier élément (en bas) d'une liste
+ * @brief Supprime le dernier élément d'une liste
  * @param[in] p : Liste
  */
 void delTailList(liste *p) {
     Elementliste e, f;
     if (!emptyList(*p)) {
-        for (int i=0; i<nbEltList(*p); i++) {
-            pickEltList(*p, &e, i);
-            pickEltList(*p, &f, i+1);
-            swapEltList(&e, &f);
-        }
-        p->Tete--;
         p->nbElt--;
     }
 }
 
 /**
- * @brief Supprime le dernier élément (en haut) d'une liste
+ * @brief Supprime le premier élément d'une liste
  * @param[in] p : Liste
  */
 void delFrontList(liste *p) {
     if (!emptyList(*p)) {
-        p->Tete--;
+        p->Tete++;
         p->nbElt--;
     }
 }
 
 /**
- * @brief Renvoie le dernier élément (en haut) d'une liste
+ * @brief Renvoie l'élément en tête d'une liste
  * @param[in] p : Liste
  * @param[out] e : Element renvoyé
  */
 void headList(liste p, Elementliste *e) {
     if (!emptyList(p)) {
-        pickEltList(p, e, p.Tete);
+        pickEltList(p, e, 0);
     }
 }
 
 /**
- * @brief Renvoie le premier élément (en bas) d'une liste
+ * @brief Renvoie le dernier élément d'une liste
  * @param[in] p : Liste
  * @param[out] e : Element renvoyé
  */
 void tailList(liste p, Elementliste *e) {
     if (!emptyList(p)) {
-        pickEltList(p, e, 0);
+        pickEltList(p, e, p.nbElt-1);
     }
 }
 
@@ -130,7 +131,7 @@ bool fullList(liste p) {
  */
 void dumpList(liste p,FILE *fp) {
     Elementliste e;
-    for (int i=0; i<=p.Tete; i++) {
+    for (int i=0; i<p.nbElt; i++) {
         pickEltList(p, &e, i);
         afficher_element(e, fp);
     }
@@ -154,11 +155,11 @@ void swapEltList(Elementliste *a,Elementliste *b) {
  * @param[in,out] p : Liste à trier
  */
 void bubbleSortList(liste *p) {
-    for (int i=nbEltList(*p)-1; i>0; i--) {
+    for (int i=nbEltList(*p); i>0; i--) {
         bool sorted = true;
         for (int j=0; j<i; j++) {
-            if (p->Tabliste[j].poids > p->Tabliste[j+1].poids) {
-                swapEltList(&p->Tabliste[j+1], &p->Tabliste[j]);
+            if (p->Tabliste[p->Tete+j].poids > p->Tabliste[p->Tete+j+1].poids) {
+                swapEltList(&p->Tabliste[p->Tete+j+1], &p->Tabliste[p->Tete+j]);
                 sorted = false;
             }
         }
@@ -174,21 +175,24 @@ void bubbleSortList(liste *p) {
  */
 void pickEltList(liste l,Elementliste *e,int index) {
     if (nbEltList(l) > index) {
-        copie_element(e, l.Tabliste[index]);
-    } else {
+        copie_element(e, l.Tabliste[l.Tete+index]);
+    }
+    /*
+    else {
         printf("ERR\n");
     }
+     */
 }
 
 /**
- * @brief Cherche un élément est dans une liste
+ * @brief Cherche si un élément est dans une liste
  * @param[in] p : Liste où chercher
  * @param[in] e : Element à chercher
  * @return bool true=trouvé, false=pas trouvé
  */
 bool belongEltList(liste p,Elementliste e) {
     Elementliste t_e;
-    for (int i=0; i<p.Tete; i++) {
+    for (int i=0; i<p.nbElt; i++) {
         pickEltList(p, &t_e, i);
         if (cmp_elements(e, t_e)) {
             return true;

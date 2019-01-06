@@ -10,5 +10,6 @@
 #define PROJET_S3_CONDORCET_H
 
 #include "global.h"
+#include "circuit.h"
 
 #endif //PROJET_S3_CONDORCET_H

@@ -17,4 +17,6 @@ add_executable(projet_s3
         src/uninomiales.c
         src/uninomiales.h
         src/condorcet.c
-        src/condorcet.h)
+        src/condorcet.h
+        src/circuit.c
+        src/circuit.h)

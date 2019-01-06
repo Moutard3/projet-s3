@@ -14,6 +14,7 @@
 #include "liste.h"
 #include "utils_sd.h"
 #include "uninomiales.h"
+#include "condorcet.h"
 
 /**
  * @brief Entrée du programme

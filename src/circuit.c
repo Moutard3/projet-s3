@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include "global.h" ///
-#include "liste.h" ///
+#include "circuit.h"
 
 // pour la recherche de circuit
 #define LIBRE -1

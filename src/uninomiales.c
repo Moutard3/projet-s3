@@ -19,9 +19,7 @@ void uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur
     int nbCandidats = matcsv.nbCol-matcsv.offset;
 
     // Initialisation du tableau des votes
-    for (int i = 0; i < nbCandidats; i++) {
-        votes[i] = 0;
-    }
+    init_tab_int(votes, nbCandidats, 0);
 
     // Compte des votes
     int skipped = 0;

@@ -2,6 +2,7 @@
  * @file global.h
  * @brief 
  * @author Vincent Dugat
+ * @author Alexandre Saillet
  * @date 2018
  */
 
@@ -46,15 +47,14 @@ typedef struct s_mat_char_dyn{
     int offset; ///< Nombre de colonnes avant celles des candidats
 } t_mat_char_star_dyn; ///< Définit le type t_mat_char_star_dyn comme struct s_mat_char_dyn
 
-/**
- * Enum des methodes de vote possibles
- * UNI1 : uninomiale à un tour
- * UNI2 : uninomiale à deux tours
- * CM : condorcet minmax
- * CP : condorcet rangement des paires
- * CS : condorcet Schulze
- * VA : vote alternatif
- */
-typedef enum {UNI1=0, UNI2=1, CM=2, CP=3, CS=4, VA=5} t_enum_methodes;
+/// Enum des methodes de vote possibles
+typedef enum {
+    UNI1=0, ///< uninomiale à un tour
+    UNI2=1, ///< uninomiale à deux tours
+    CM=2, ///< condorcet minmax
+    CP=3, ///< condorcet rangement des paires
+    CS=4, ///< condorcet Schulze
+    VA=5 ///< vote alternatif
+} t_enum_methodes;
 
 #endif //PROJET_S3_GLOBAL_H

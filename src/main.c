@@ -41,6 +41,12 @@ int main(int argc, char* argv[]) {
 
         // -d
         else if (strcmp(argv[i], "-d") == 0) {
+            for (int j = 0; j < nbMethodes; j++) {
+                if (methodes[j] == UNI1 || methodes[j] == UNI2 || methodes[j] == VA) {
+                    fprintf(stderr, "Une des méthodes nécessite des ballots, -d est donc incompatible, utilisez -i.\n");
+                    exit(EXIT_FAILURE);
+                }
+            }
             fileType = 2;
             filePath = argv[i+1];
         }
@@ -52,8 +58,16 @@ int main(int argc, char* argv[]) {
 
         else if (strcmp(argv[i], "-m") == 0) {
             if (strcmp(argv[i + 1], "uni1") == 0) {
+                if (fileType == 2) {
+                    fprintf(stderr, "La méthode uninomiale à un tour nécessite des ballots, -d est donc incompatible, utilisez -i.\n");
+                    exit(EXIT_FAILURE);
+                }
                 methodes[nbMethodes++] = UNI1;
             } else if (strcmp(argv[i + 1], "uni2") == 0) {
+                if (fileType == 2) {
+                    fprintf(stderr, "La méthode uninomiale à deux tours nécessite des ballots, -d est donc incompatible, utilisez -i.\n");
+                    exit(EXIT_FAILURE);
+                }
                 methodes[nbMethodes++] = UNI2;
             } else if (strcmp(argv[i + 1], "cm") == 0) {
                 methodes[nbMethodes++] = CM;
@@ -62,6 +76,10 @@ int main(int argc, char* argv[]) {
             } else if (strcmp(argv[i + 1], "cs") == 0) {
                 methodes[nbMethodes++] = CS;
             } else if (strcmp(argv[i + 1], "va") == 0) {
+                if (fileType == 2) {
+                    fprintf(stderr, "La méthode vote alternatif nécessite des ballots, -d est donc incompatible, utilisez -i.\n");
+                    exit(EXIT_FAILURE);
+                }
                 methodes[nbMethodes++] = VA;
             }
         }
@@ -104,29 +122,81 @@ int main(int argc, char* argv[]) {
     csv_to_t_tab_mat_str_dyn(filep, &matcsv, '\t');
     //affiche_t_mat_char_star_dyn(matcsv, stdout);
 
+    fclose(filep);
+
     // Créer matrice des duels
     t_mat_int_dyn matduel;
     // -i
     if (fileType == 1) {
         matcsv.offset = 3;
-        // TODO
+        creer_t_mat_int_dyn(&matduel, matcsv.nbCol-matcsv.offset, matcsv.nbCol-matcsv.offset);
+        init_mat_int(matduel.tab, matduel.nbRows, matduel.nbCol, 0);
+
+        for (int i = 1; i < matcsv.nbRows; i++) {
+            for (int j = matcsv.offset; j < matcsv.nbCol; j++) {
+                for (int k = matcsv.offset; k < matcsv.nbCol; k++) {
+                    if (k != j && strtol(matcsv.tab[i][j], NULL, 10) < strtol(matcsv.tab[i][k], NULL, 10)) {
+                        matduel.tab[j-matcsv.offset][k-matcsv.offset]++;
+                    }
+                }
+            }
+        }
     }
     // -d
     else {
         matcsv.offset = 0;
-        creer_t_mat_int_dyn(&matduel, matcsv.nbRows-1, matcsv.nbCol-matcsv.offset);
+        creer_t_mat_int_dyn(&matduel, matcsv.nbCol-matcsv.offset, matcsv.nbCol-matcsv.offset);
         int a=0, b=0;
         for (int i = 1; i < matcsv.nbRows; i++) {
             for (int j = matcsv.offset; j < matcsv.nbCol; j++) {
                 matduel.tab[a][b++] = (int) strtol(matcsv.tab[i][j], NULL, 10);
-                //printf("%s == %ld == %d == (%d,%d)=%d\n", matcsv.tab[i][j], strtol(matcsv.tab[i][j], NULL, 10), (int)strtol(matcsv.tab[i][j], NULL, 10), a, b-1, matduel.tab[a][b-1]);
             }
             a++;
             b=0;
         }
-        printf("\n");
-        //affiche_t_mat_int_dyn(matduel, stdout);
     }
+
+    //affiche_t_mat_int_dyn(matduel, stdout);
+
+    // Création des arcs de duel
+    liste larcs;
+    createList(&larcs);
+    for (int i = 0; i < matduel.nbRows; i++) {
+        for (int j = 0; j < matduel.nbCol; j++) {
+            if (matduel.tab[i][j] > matduel.tab[j][i]) {
+                Elementliste e;
+                e.orig = i;
+                e.dest = j;
+                e.poids = matduel.tab[i][j];
+                addFrontList(&larcs, e);
+            }
+        }
+    }
+    //dumpList(larcs, stdout);
+
+    // Représentation des graphs
+    FILE* pyTestFile = fopen("../../pollTests.py", "r");
+    FILE* pyGraphFile = fopen("../../pollGraph.py", "w");
+    if (!pyTestFile) {
+        fprintf(stderr, "\nVérifiez que le fichier pollTests.py est bien présent à côté de l'executable.\n\n");
+    } else if (!pyGraphFile) {
+        fprintf(stderr, "\nImpossible de créer le fichier pollGraph.py à côté de l'executable.\n\n");
+    } else {
+        char line[255];
+        while( fgets(line, 255, pyTestFile) ) {
+            if (strcmp(line, "# ajouter les arcs ici\n") != 0) {
+                fprintf(pyGraphFile, "%s", line);
+            } else {
+                for (int i = 0; i < nbEltList(larcs); i++) {
+                    Elementliste e;
+                    pickEltList(larcs, &e, i);
+                    fprintf(pyGraphFile, "G.add_edges_from([(%d,%d)],weight=%d)\n", e.orig, e.dest, e.poids);
+                }
+            }
+        }
+    }
+    fclose(pyTestFile);
+    fclose(pyGraphFile);
 
     for (int i = 0; i < nbMethodes; i++) {
         if (methodes[i] == UNI1) {
@@ -150,8 +220,12 @@ int main(int argc, char* argv[]) {
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur1+matcsv.offset], (votesT1[indVainqueur1]*100)/(matcsv.nbRows-1));
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur2+matcsv.offset], (votesT1[indVainqueur2]*100)/(matcsv.nbRows-1));
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 2, 2, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votesT2[(indVainqueur == indVainqueur1)?(0):(1)]*100)/(matcsv.nbRows-1));
+        } else if (methodes[i] == CM) {
+
         }
     }
+
+    return 0;
 }
 
 /**

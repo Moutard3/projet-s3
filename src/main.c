@@ -345,6 +345,15 @@ int main(int argc, char* argv[]) {
             free(votesT1);
             free(votesT2);
         } else if (methodes[i] == CM) {
+            int indVainqueur;
+
+            if(!circuits(larcs, matduel.nbRows)) {
+                chercherVainqueurCondorcet(larcs, matduel, &indVainqueur);
+            } else {
+                indVainqueur = 0;
+            }
+
+            printf("Mode de scrutin : %s, %d candidats, %d votants, vainqueur = %s\n", "Condorcet minimax",  matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset]);
         }
     }
 

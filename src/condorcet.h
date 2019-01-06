@@ -12,4 +12,6 @@
 #include "global.h"
 #include "circuit.h"
 
+void chercherVainqueurCondorcet(liste larcs, t_mat_int_dyn matduel, int *indVainqueur);
+
 #endif //PROJET_S3_CONDORCET_H

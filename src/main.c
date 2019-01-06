@@ -180,6 +180,7 @@ int main(int argc, char* argv[]) {
     if (!pyTestFile) {
         fprintf(stderr, "\nVérifiez que le fichier pollTests.py est bien présent à côté de l'executable.\n\n");
     } else if (!pyGraphFile) {
+        fclose(pyTestFile);
         fprintf(stderr, "\nImpossible de créer le fichier pollGraph.py à côté de l'executable.\n\n");
     } else {
         char line[255];
@@ -194,9 +195,10 @@ int main(int argc, char* argv[]) {
                 }
             }
         }
+
+        fclose(pyTestFile);
+        fclose(pyGraphFile);
     }
-    fclose(pyTestFile);
-    fclose(pyGraphFile);
 
     for (int i = 0; i < nbMethodes; i++) {
         if (methodes[i] == UNI1) {
@@ -210,6 +212,8 @@ int main(int argc, char* argv[]) {
             printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
             // En retirant les votes blancs des votes:
             // printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1-blanc));
+
+            free(votes);
         } else if (methodes[i] == UNI2) {
             int *votesT1 = creer_tab_int(matcsv.nbCol-matcsv.offset), *votesT2 = creer_tab_int(2);
             int indVainqueur, indVainqueur1, indVainqueur2, blanc;
@@ -220,10 +224,25 @@ int main(int argc, char* argv[]) {
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur1+matcsv.offset], (votesT1[indVainqueur1]*100)/(matcsv.nbRows-1));
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur2+matcsv.offset], (votesT1[indVainqueur2]*100)/(matcsv.nbRows-1));
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 2, 2, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votesT2[(indVainqueur == indVainqueur1)?(0):(1)]*100)/(matcsv.nbRows-1));
+
+            free(votesT1);
+            free(votesT2);
         } else if (methodes[i] == CM) {
 
         }
     }
+
+    for (int i=0; i<matcsv.nbRows; i++) {
+        for (int j=0; j<matcsv.nbCol; j++) {
+            free(matcsv.tab[i][j]);
+        }
+        free(matcsv.tab[i]);
+    }
+    free(matcsv.tab);
+    for (int i=0; i<matduel.nbRows; i++) {
+        free(matduel.tab[i]);
+    }
+    free(matduel.tab);
 
     return 0;
 }

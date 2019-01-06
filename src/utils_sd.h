@@ -10,6 +10,7 @@
 #define PROJET_S3_UTILS_SD_H
 
 #include "global.h"
+#include <malloc.h>
 
 int * creer_tab_int(int dim); // juste un malloc de dim cases
 int ** creer_mat_int(int nbRows,int nbCol); // malob 2D

@@ -6,7 +6,6 @@
  * @date LU: 04/01/2019
  */
 
-#include <malloc.h>
 #include "utils_sd.h"
 
 /**
@@ -178,7 +177,13 @@ void csv_to_t_tab_mat_str_dyn(FILE *csvfp, t_mat_char_star_dyn * tabmots, char s
             if (firstline) {
                 tabmots->tab[0] = realloc(tabmots->tab[0], sizeof(char *) * ++tabmots->nbCol);
             }
-            tabmots->tab[tabmots->nbRows-1][i++] = strdup(tok);
+
+            tabmots->tab[tabmots->nbRows-1][i] = malloc(strlen(tok)+1);
+            strcpy(tabmots->tab[tabmots->nbRows-1][i++], tok);
+
+            // Problème de compilation sur linux avec strdup:
+            // tabmots->tab[tabmots->nbRows-1][i++] = strdup(tok);
+
             //printf("%s : %s\n", tabmots->tab[0][i-1], tabmots->tab[tabmots->nbRows-1][i-1]);
         }
         firstline=false;

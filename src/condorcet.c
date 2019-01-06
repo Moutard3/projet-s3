@@ -8,23 +8,35 @@
 
 #include "condorcet.h"
 
-void chercherVainqueurCondorcet(liste larcs, t_mat_int_dyn matduel, int *indVainqueur) {
-    for (int k = 0; k < matduel.nbRows; k++) {
+void chercherVainqueurCondorcet(t_mat_int_dyn matduel, int *indVainqueur) {
+    for (int i = 0; i < matduel.nbRows; i++) {
         bool estVainqueur = true;
         for (int j = 0; j < matduel.nbRows; j++) {
-            if (k != j) {
-                Elementliste e;
-                e.orig = k;
-                e.dest = j;
-                e.poids = matduel.tab[k][j];
-
-                if (!belongEltList(larcs, e)) {
+            if (i != j) {
+                if (matduel.tab[j][i] > matduel.tab[i][j]) {
                     estVainqueur = false;
                 }
             }
         }
         if (estVainqueur) {
-            *indVainqueur = k;
+            *indVainqueur = i;
+            break;
+        }
+    }
+}
+
+void chercherVainqueurMinimax(t_mat_int_dyn matduel, int *indVainqueur) {
+    int max = matduel.tab[0][0];
+    for (int i = 0; i < matduel.nbRows; i++) {
+        int min = matduel.tab[i][0];
+        for (int j = 0; j < matduel.nbCol; j++) {
+            if (min > matduel.tab[i][j] && i != j) {
+                min = matduel.tab[i][j];
+            }
+        }
+        if (max < min) {
+            max = min;
+            *indVainqueur = i;
         }
     }
 }

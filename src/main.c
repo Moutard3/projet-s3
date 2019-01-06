@@ -348,9 +348,9 @@ int main(int argc, char* argv[]) {
             int indVainqueur;
 
             if(!circuits(larcs, matduel.nbRows)) {
-                chercherVainqueurCondorcet(larcs, matduel, &indVainqueur);
+                chercherVainqueurCondorcet(matduel, &indVainqueur);
             } else {
-                indVainqueur = 0;
+                chercherVainqueurMinimax(matduel, &indVainqueur);
             }
 
             printf("Mode de scrutin : %s, %d candidats, %d votants, vainqueur = %s\n", "Condorcet minimax",  matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset]);

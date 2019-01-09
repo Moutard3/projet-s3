@@ -1,8 +1,6 @@
 /**
  * @file circuit.h
- * @brief 
- * @author Alexandre Saillet
- * @date 06/01/2019
+ * @brief
  */
 
 #ifndef PROJET_S3_CIRCUIT_H

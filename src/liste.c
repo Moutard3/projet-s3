@@ -2,7 +2,8 @@
  * @file liste.c
  * @brief 
  * @author Alexandre Saillet
- * @date 01/11/2018
+ * @date CR 01/11/2018
+ * @date LU 06/01/2019
  */
 
 #include "liste.h"
@@ -151,14 +152,14 @@ void swapEltList(Elementliste *a,Elementliste *b) {
 }
 
 /**
- * @brief Trie une liste avec la méthode Bubble
+ * @brief Trie une liste avec la méthode Bubble (décroissant)
  * @param[in,out] p : Liste à trier
  */
 void bubbleSortList(liste *p) {
     for (int i=nbEltList(*p); i>0; i--) {
         bool sorted = true;
         for (int j=0; j<i; j++) {
-            if (p->Tabliste[p->Tete+j].poids > p->Tabliste[p->Tete+j+1].poids) {
+            if (p->Tabliste[p->Tete+j].poids < p->Tabliste[p->Tete+j+1].poids) {
                 swapEltList(&p->Tabliste[p->Tete+j+1], &p->Tabliste[p->Tete+j]);
                 sorted = false;
             }

@@ -3,7 +3,7 @@
  * @brief 
  * @author Alexandre Saillet
  * @date CR 04/01/2019
- * @date LU 04/01/2019
+ * @date LU 06/01/2019
  */
 
 #ifndef PROJET_S3_CONDORCET_H
@@ -13,7 +13,8 @@
 #include "circuit.h"
 #include "utils_sd.h"
 
-void chercherVainqueurCondorcet(t_mat_int_dyn matduel, int *indVainqueur);
+void chercherVainqueurCondorcet(liste larcs, int *indVainqueur, int nbCandidats);
 void chercherVainqueurMinimax(t_mat_int_dyn matduel, int *indVainqueur);
+void chercherVainqueurPaires(liste larcs, int *indVainqueur, int nbCandidats);
 
 #endif //PROJET_S3_CONDORCET_H

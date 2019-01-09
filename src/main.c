@@ -4,7 +4,7 @@
  * @author Vincent Dugat
  * @author Alexandre Saillet
  * @date CR: 01/11/2018
- * @date LU: 04/01/2019
+ * @date LU: 06/01/2019
  */
 
 #include <stdio.h>
@@ -326,7 +326,7 @@ int main(int argc, char* argv[]) {
             uninomiale_simple(matcsv, votes, &indVainqueur, &blanc);
             printf("Nombre de votes nuls pour uninominal : %d\n", blanc);
             // Sans retirer les votes blancs des votes (comme dans res_uni1)
-            printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
+            printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matduel.nbRows, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1));
             // En retirant les votes blancs des votes:
             // printf("Mode de scrutin: %s, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à un tour", matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votes[indVainqueur]*100)/(matcsv.nbRows-1-blanc));
 
@@ -338,8 +338,8 @@ int main(int argc, char* argv[]) {
             //printf("\nUNINOMIALE DOUBLE:\n");
             uninomiale_double(matcsv, votesT1, &indVainqueur1, &indVainqueur2, votesT2, &indVainqueur, &blanc);
             printf("Nombre de votes nuls pour uninominal : %d\n", blanc);
-            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur1+matcsv.offset], (votesT1[indVainqueur1]*100)/(matcsv.nbRows-1));
-            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur2+matcsv.offset], (votesT1[indVainqueur2]*100)/(matcsv.nbRows-1));
+            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matduel.nbRows, matcsv.nbRows-1, matcsv.tab[0][indVainqueur1+matcsv.offset], (votesT1[indVainqueur1]*100)/(matcsv.nbRows-1));
+            printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 1, matduel.nbRows, matcsv.nbRows-1, matcsv.tab[0][indVainqueur2+matcsv.offset], (votesT1[indVainqueur2]*100)/(matcsv.nbRows-1));
             printf("Mode de scrutin: %s, tour %d, %d candidats, %d votants, vainqueur = %s, score = %d%%\n", "Uninomiale à deux tour", 2, 2, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset], (votesT2[(indVainqueur == indVainqueur1)?(0):(1)]*100)/(matcsv.nbRows-1));
 
             free(votesT1);
@@ -348,12 +348,26 @@ int main(int argc, char* argv[]) {
             int indVainqueur;
 
             if(!circuits(larcs, matduel.nbRows)) {
-                chercherVainqueurCondorcet(matduel, &indVainqueur);
+                chercherVainqueurCondorcet(larcs, &indVainqueur, matduel.nbRows);
             } else {
                 chercherVainqueurMinimax(matduel, &indVainqueur);
             }
 
-            printf("Mode de scrutin : %s, %d candidats, %d votants, vainqueur = %s\n", "Condorcet minimax",  matcsv.nbCol-matcsv.offset, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset]);
+            printf("Mode de scrutin : %s, %d candidats, %d votants, vainqueur = %s\n", "Condorcet minimax",  matduel.nbRows, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset]);
+        } else if (methodes[i] == CP) {
+            int indVainqueur;
+
+            if(!circuits(larcs, matduel.nbRows)) {
+                chercherVainqueurCondorcet(larcs, &indVainqueur, matduel.nbRows);
+            } else {
+                chercherVainqueurPaires(larcs, &indVainqueur, matduel.nbRows);
+            }
+
+            printf("Mode de scrutin : %s, %d candidats, %d votants, vainqueur = %s\n", "Condorcet paires",  matduel.nbRows, matcsv.nbRows-1, matcsv.tab[0][indVainqueur+matcsv.offset]);
+        } else if (methodes[i] == CS) {
+
+        } else if (methodes[i] == VA) {
+
         }
     }
 

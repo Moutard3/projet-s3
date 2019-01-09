@@ -3,22 +3,23 @@
  * @brief 
  * @author Alexandre Saillet
  * @date CR 04/01/2019
- * @date LU 04/01/2019
+ * @date LU 06/01/2019
  */
 
 #include "condorcet.h"
 
-void chercherVainqueurCondorcet(t_mat_int_dyn matduel, int *indVainqueur) {
-    for (int i = 0; i < matduel.nbRows; i++) {
-        bool estVainqueur = true;
-        for (int j = 0; j < matduel.nbRows; j++) {
-            if (i != j) {
-                if (matduel.tab[j][i] > matduel.tab[i][j]) {
-                    estVainqueur = false;
-                }
+void chercherVainqueurCondorcet(liste larcs, int *indVainqueur, int nbCandidats) {
+    for (int i = 0; i < nbCandidats; i++) {
+        int nbArcSortant = 0;
+        for (int j = 0; j < nbEltList(larcs); j++) {
+            Elementliste e;
+            pickEltList(larcs, &e, j);
+
+            if (e.orig == i) {
+                nbArcSortant++;
             }
         }
-        if (estVainqueur) {
+        if (nbArcSortant == nbCandidats-1) {
             *indVainqueur = i;
             break;
         }
@@ -39,4 +40,22 @@ void chercherVainqueurMinimax(t_mat_int_dyn matduel, int *indVainqueur) {
             *indVainqueur = i;
         }
     }
+}
+
+void chercherVainqueurPaires(liste larcs, int *indVainqueur, int nbCandidats) {
+    liste lcirc;
+    createList(&lcirc);
+
+    bubbleSortList(&larcs);
+
+    for (int i = 0; i < nbEltList(larcs); i++) {
+        Elementliste e;
+        pickEltList(larcs, &e, i);
+        addTailList(&lcirc, e);
+        if (circuits(lcirc, nbCandidats)) {
+            delTailList(&lcirc);
+        }
+    }
+
+    chercherVainqueurCondorcet(lcirc, indVainqueur, nbCandidats);
 }

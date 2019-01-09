@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>projet-s3: Référence du fichier src/condorcet.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">projet-s3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier condorcet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Méthodes de vote condorcet.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="circuit_8h_source.html">circuit.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils__sd_8h_source.html">utils_sd.h</a>&quot;</code><br />
+</div>
+<p><a href="condorcet_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a9a0aafec553c2b43bfa19ad30710edd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="condorcet_8h.html#a9a0aafec553c2b43bfa19ad30710edd6">chercherVainqueurCondorcet</a> (<a class="el" href="structliste.html">liste</a> larcs, int *indVainqueur, int nbCandidats)</td></tr>
+<tr class="memdesc:a9a0aafec553c2b43bfa19ad30710edd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche un vainqueur de condorcet sans conflits.  <a href="#a9a0aafec553c2b43bfa19ad30710edd6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9a0aafec553c2b43bfa19ad30710edd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6f1afba59dce71dc65d9b69940d35d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="condorcet_8h.html#a8b6f1afba59dce71dc65d9b69940d35d">chercherVainqueurMinimax</a> (<a class="el" href="global_8h.html#afbda29014eac4aef9f13b911074e4cf1">t_mat_int_dyn</a> matduel, int *indVainqueur)</td></tr>
+<tr class="memdesc:a8b6f1afba59dce71dc65d9b69940d35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche le vainqueur condorcet d'après la méthode minimax.  <a href="#a8b6f1afba59dce71dc65d9b69940d35d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8b6f1afba59dce71dc65d9b69940d35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec63ec6df82c381d52e4fa804c2a283e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="condorcet_8h.html#aec63ec6df82c381d52e4fa804c2a283e">chercherVainqueurPaires</a> (<a class="el" href="structliste.html">liste</a> larcs, int *indVainqueur, int nbCandidats)</td></tr>
+<tr class="memdesc:aec63ec6df82c381d52e4fa804c2a283e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche le vainqueur condorcet d'après la méthode minimax.  <a href="#aec63ec6df82c381d52e4fa804c2a283e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aec63ec6df82c381d52e4fa804c2a283e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Méthodes de vote condorcet. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Alexandre Saillet </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>CR 04/01/2019 </dd>
+<dd>
+LU 09/01/2019 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a9a0aafec553c2b43bfa19ad30710edd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0aafec553c2b43bfa19ad30710edd6">&#9670;&nbsp;</a></span>chercherVainqueurCondorcet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chercherVainqueurCondorcet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structliste.html">liste</a>&#160;</td>
+          <td class="paramname"><em>larcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>indVainqueur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbCandidats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cherche un vainqueur de condorcet sans conflits. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">larcs</td><td>: Liste des arcs </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">indVainqueur</td><td>: Indice du vainqueur à partir de l'offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbCandidats</td><td>: Nombre de candidats </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b6f1afba59dce71dc65d9b69940d35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6f1afba59dce71dc65d9b69940d35d">&#9670;&nbsp;</a></span>chercherVainqueurMinimax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chercherVainqueurMinimax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="global_8h.html#afbda29014eac4aef9f13b911074e4cf1">t_mat_int_dyn</a>&#160;</td>
+          <td class="paramname"><em>matduel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>indVainqueur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cherche le vainqueur condorcet d'après la méthode minimax. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">matduel</td><td>: Matrice de duels </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">indVainqueur</td><td>: Indice du vainqueur à partir de l'offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec63ec6df82c381d52e4fa804c2a283e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec63ec6df82c381d52e4fa804c2a283e">&#9670;&nbsp;</a></span>chercherVainqueurPaires()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chercherVainqueurPaires </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structliste.html">liste</a>&#160;</td>
+          <td class="paramname"><em>larcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>indVainqueur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbCandidats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cherche le vainqueur condorcet d'après la méthode minimax. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">larcs</td><td>: Liste des arcs </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">indVainqueur</td><td>: Indice du vainqueur à partir de l'offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbCandidats</td><td>: Nombre de candidats </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

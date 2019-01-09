@@ -3,7 +3,7 @@
  * @brief Méthodes de vote unimoniales
  * @author Alexandre Saillet
  * @date CR: 04/01/2019
- * @date LU: 04/01/2019
+ * @date LU: 09/01/2019
  */
 
 #ifndef PROJET_S3_UNINOMIALES_H

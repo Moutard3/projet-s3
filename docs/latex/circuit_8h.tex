@@ -1,0 +1,37 @@
+\hypertarget{circuit_8h}{}\section{Référence du fichier src/circuit.h}
+\label{circuit_8h}\index{src/circuit.\+h@{src/circuit.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}liste.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils\+\_\+sd.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{circuit_8h_acb00992efca56626cdf0907e5edb5b51}\label{circuit_8h_acb00992efca56626cdf0907e5edb5b51}} 
+\#define {\bfseries KO}~-\/1
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{circuit_8h_a4d6882f3cdd5de677fb5f0cb6db07011}{circuits} (\hyperlink{structliste}{liste} larcs, int nb\+Candidats)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{circuit_8h_a4d6882f3cdd5de677fb5f0cb6db07011}\label{circuit_8h_a4d6882f3cdd5de677fb5f0cb6db07011}} 
+\index{circuit.\+h@{circuit.\+h}!circuits@{circuits}}
+\index{circuits@{circuits}!circuit.\+h@{circuit.\+h}}
+\subsubsection{\texorpdfstring{circuits()}{circuits()}}
+{\footnotesize\ttfamily bool circuits (\begin{DoxyParamCaption}\item[{\hyperlink{structliste}{liste}}]{larcs,  }\item[{int}]{nb\+Candidats }\end{DoxyParamCaption})}
+
+ajouter un paramètre de dimension pour s\textquotesingle{}affranchir de la variable globale nb\+Candidats. utiliser pick\+Elt cherche si le graphe contient un circuit avec tab de marquage et tab de mémoire des arcs 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em la} & liste des arcs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\+: true, il y a un circuit, false sinon 
+\end{DoxyReturn}

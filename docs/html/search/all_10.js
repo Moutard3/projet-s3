@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['uninomiale_5fdouble',['uninomiale_double',['../uninomiales_8c.html#ac0a03ed36b267a59b8482a49a503f40a',1,'uninomiale_double(t_mat_char_star_dyn matcsv, int *votesT1, int *indVainqueur1, int *indVainqueur2, int *votesT2, int *indVainqueur, int *blanc):&#160;uninomiales.c'],['../uninomiales_8h.html#ac0a03ed36b267a59b8482a49a503f40a',1,'uninomiale_double(t_mat_char_star_dyn matcsv, int *votesT1, int *indVainqueur1, int *indVainqueur2, int *votesT2, int *indVainqueur, int *blanc):&#160;uninomiales.c']]],
-  ['uninomiale_5fsimple',['uninomiale_simple',['../uninomiales_8c.html#a8f23f0f7897d612ed3fafa6e3bac5bdb',1,'uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur, int *blanc):&#160;uninomiales.c'],['../uninomiales_8h.html#a8f23f0f7897d612ed3fafa6e3bac5bdb',1,'uninomiale_simple(t_mat_char_star_dyn matcsv, int *votes, int *indVainqueur, int *blanc):&#160;uninomiales.c']]],
-  ['uninomiales_2ec',['uninomiales.c',['../uninomiales_8c.html',1,'']]],
-  ['uninomiales_2eh',['uninomiales.h',['../uninomiales_8h.html',1,'']]],
-  ['utils_5fsd_2ec',['utils_sd.c',['../utils__sd_8c.html',1,'']]],
-  ['utils_5fsd_2eh',['utils_sd.h',['../utils__sd_8h.html',1,'']]]
+  ['t_5farc_5fp',['t_arc_p',['../global_8h.html#a6481fa2d5db097a85ff5fe162c14068a',1,'global.h']]],
+  ['t_5fenum_5fmethodes',['t_enum_methodes',['../global_8h.html#aa079d9dfd8cb94b5b3368363aa43a891',1,'global.h']]],
+  ['t_5fmat_5fchar_5fstar_5fdyn',['t_mat_char_star_dyn',['../global_8h.html#a6246790d2f4187545380406f21036c05',1,'global.h']]],
+  ['t_5fmat_5fint_5fdyn',['t_mat_int_dyn',['../global_8h.html#afbda29014eac4aef9f13b911074e4cf1',1,'global.h']]],
+  ['t_5ftab_5fint_5fdyn',['t_tab_int_dyn',['../global_8h.html#a71b518557f21194cba30d4f780d93055',1,'global.h']]],
+  ['tab',['tab',['../structs__tab__dyn.html#a97599dc347ae84a1df38cab06b50dfa0',1,'s_tab_dyn::tab()'],['../structs__mat__dyn.html#ad49bf24c5f929d1ed8e22fee5935834b',1,'s_mat_dyn::tab()'],['../structs__mat__char__dyn.html#aed543834b9d320f54b8e095f2bcb254c',1,'s_mat_char_dyn::tab()']]],
+  ['tabliste',['Tabliste',['../structliste.html#a5306c3d8ec2ffff7bc66e76132cc395e',1,'liste']]],
+  ['taillist',['tailList',['../liste_8c.html#a952b7b53e6a0bf83ed77b30f56039cd3',1,'tailList(liste p, Elementliste *e):&#160;liste.c'],['../liste_8h.html#a952b7b53e6a0bf83ed77b30f56039cd3',1,'tailList(liste p, Elementliste *e):&#160;liste.c']]],
+  ['test_5flecture_5fcsv',['test_lecture_csv',['../main_8c.html#a448da4cdb9515be4db08508bad4e3d97',1,'main.c']]],
+  ['test_5fliste',['test_liste',['../main_8c.html#a1c776e682ff62700bedcb6e3dd43a8a0',1,'main.c']]],
+  ['tete',['Tete',['../structliste.html#ac27f6a14865441ed2e343acc6738aad2',1,'liste']]]
 ];

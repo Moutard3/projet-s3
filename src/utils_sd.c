@@ -3,7 +3,7 @@
  * @brief 
  * @author Alexandre Saillet
  * @date CR: 02/11/2018
- * @date LU: 04/01/2019
+ * @date LU: 09/01/2019
  */
 
 #include "utils_sd.h"
@@ -28,6 +28,7 @@ int ** creer_mat_int(int nbRows,int nbCol) {
     for (int i=0; i<nbRows; i++) {
         tab[i] = creer_tab_int(nbCol);
     }
+
     return tab;
 }
 
@@ -147,7 +148,10 @@ void init_tab_int(int *tab,int dim,int valeur) {
  */
 void init_mat_int(int **mat,int nbRows,int nbCol,int valeur) {
     for (int i=0; i<nbRows; i++) {
-        init_tab_int(*(mat+i), nbCol, valeur);
+        //init_tab_int(*(mat+i), nbCol, valeur);
+        for (int j=0; j<nbCol; j++) {
+            mat[i][j] = valeur;
+        }
     }
 }
 

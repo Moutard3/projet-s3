@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>projet-s3: Référence du fichier src/main.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -29,21 +29,18 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.14 -->
+<!-- Généré par Doxygen 1.8.13 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
-/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -77,12 +74,31 @@ $(function() {
 <code>#include &quot;<a class="el" href="liste_8h_source.html">liste.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils__sd_8h_source.html">utils_sd.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="uninomiales_8h_source.html">uninomiales.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="condorcet_8h_source.html">condorcet.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
-<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entrée du programme.  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3542fd3da5b327f845eb477eedccc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7a3542fd3da5b327f845eb477eedccc6">lireArguments</a> (int argc, char *argv[], int *nbMethodes, <a class="el" href="global_8h.html#aa079d9dfd8cb94b5b3368363aa43a891">t_enum_methodes</a> *methodes, int *fileType, char **filePath)</td></tr>
+<tr class="memdesc:a7a3542fd3da5b327f845eb477eedccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lis les arguments du programme.  <a href="#a7a3542fd3da5b327f845eb477eedccc6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7a3542fd3da5b327f845eb477eedccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab322aedf8b0e37ea70bcbd6ffcfdd838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab322aedf8b0e37ea70bcbd6ffcfdd838">verifArguments</a> (int fileType, const char *filePath)</td></tr>
+<tr class="memdesc:ab322aedf8b0e37ea70bcbd6ffcfdd838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie les arguments fournis.  <a href="#ab322aedf8b0e37ea70bcbd6ffcfdd838">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab322aedf8b0e37ea70bcbd6ffcfdd838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2a7789b1003ae5fa1111d61476a277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acb2a7789b1003ae5fa1111d61476a277">remplirMethodes</a> (int fileType, <a class="el" href="global_8h.html#aa079d9dfd8cb94b5b3368363aa43a891">t_enum_methodes</a> *methodes, int *nbMethodes)</td></tr>
+<tr class="memdesc:acb2a7789b1003ae5fa1111d61476a277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rempli le tableau de méthode si aucun -m.  <a href="#acb2a7789b1003ae5fa1111d61476a277">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acb2a7789b1003ae5fa1111d61476a277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6adbf7672a577e237c895d0acad0bc63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6adbf7672a577e237c895d0acad0bc63">creerMatCsv</a> (char *filePath, <a class="el" href="global_8h.html#a6246790d2f4187545380406f21036c05">t_mat_char_star_dyn</a> *matcsv)</td></tr>
+<tr class="memdesc:a6adbf7672a577e237c895d0acad0bc63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer la matrice à partir du fichier csv.  <a href="#a6adbf7672a577e237c895d0acad0bc63">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6adbf7672a577e237c895d0acad0bc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4819fd88ace3b70379beb6f656321334"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4819fd88ace3b70379beb6f656321334">creerMatDuel</a> (int fileType, <a class="el" href="global_8h.html#a6246790d2f4187545380406f21036c05">t_mat_char_star_dyn</a> *matcsv, <a class="el" href="global_8h.html#afbda29014eac4aef9f13b911074e4cf1">t_mat_int_dyn</a> *matduel)</td></tr>
+<tr class="memdesc:a4819fd88ace3b70379beb6f656321334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer la matrice de duel.  <a href="#a4819fd88ace3b70379beb6f656321334">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4819fd88ace3b70379beb6f656321334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678716ece42360a94030758689ff563f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a678716ece42360a94030758689ff563f">creerArcsDuel</a> (<a class="el" href="structliste.html">liste</a> *larcs, <a class="el" href="global_8h.html#afbda29014eac4aef9f13b911074e4cf1">t_mat_int_dyn</a> matduel)</td></tr>
+<tr class="memdesc:a678716ece42360a94030758689ff563f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer la liste des arcs de duel.  <a href="#a678716ece42360a94030758689ff563f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a678716ece42360a94030758689ff563f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6188e0dcb0906e1bb509b7e6422685ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6188e0dcb0906e1bb509b7e6422685ab">genererGraphPython</a> (char *baseFilePath, char *destFilePath, <a class="el" href="structliste.html">liste</a> larcs)</td></tr>
+<tr class="memdesc:a6188e0dcb0906e1bb509b7e6422685ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génére le fichier python qui affiche le graph.  <a href="#a6188e0dcb0906e1bb509b7e6422685ab">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6188e0dcb0906e1bb509b7e6422685ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a448da4cdb9515be4db08508bad4e3d97"><td class="memItemLeft" align="right" valign="top"><a id="a448da4cdb9515be4db08508bad4e3d97"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a448da4cdb9515be4db08508bad4e3d97">test_lecture_csv</a> ()</td></tr>
 <tr class="memdesc:a448da4cdb9515be4db08508bad4e3d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de tester la lecture d'un CSV. <br /></td></tr>
@@ -91,6 +107,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1c776e682ff62700bedcb6e3dd43a8a0">test_liste</a> ()</td></tr>
 <tr class="memdesc:a1c776e682ff62700bedcb6e3dd43a8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de tester les listes (de <a class="el" href="liste_8c.html">liste.c</a>) <br /></td></tr>
 <tr class="separator:a1c776e682ff62700bedcb6e3dd43a8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entrée du programme.  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Vincent Dugat </dd>
@@ -98,8 +117,235 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main
 Alexandre Saillet </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>CR: 01/11/2018 </dd>
 <dd>
-LU: 04/01/2019 </dd></dl>
+LU: 09/01/2019 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a678716ece42360a94030758689ff563f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678716ece42360a94030758689ff563f">&#9670;&nbsp;</a></span>creerArcsDuel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creerArcsDuel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structliste.html">liste</a> *&#160;</td>
+          <td class="paramname"><em>larcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="global_8h.html#afbda29014eac4aef9f13b911074e4cf1">t_mat_int_dyn</a>&#160;</td>
+          <td class="paramname"><em>matduel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer la liste des arcs de duel. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">larcs</td><td>: Liste des arcs à remplir </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matduel</td><td>: Matrice des duels </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6adbf7672a577e237c895d0acad0bc63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6adbf7672a577e237c895d0acad0bc63">&#9670;&nbsp;</a></span>creerMatCsv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creerMatCsv </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="global_8h.html#a6246790d2f4187545380406f21036c05">t_mat_char_star_dyn</a> *&#160;</td>
+          <td class="paramname"><em>matcsv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer la matrice à partir du fichier csv. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>: Chemin du fichier </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">matcsv</td><td>: Matrice à remplir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4819fd88ace3b70379beb6f656321334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4819fd88ace3b70379beb6f656321334">&#9670;&nbsp;</a></span>creerMatDuel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creerMatDuel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fileType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="global_8h.html#a6246790d2f4187545380406f21036c05">t_mat_char_star_dyn</a> *&#160;</td>
+          <td class="paramname"><em>matcsv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="global_8h.html#afbda29014eac4aef9f13b911074e4cf1">t_mat_int_dyn</a> *&#160;</td>
+          <td class="paramname"><em>matduel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer la matrice de duel. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileType</td><td>: Type de fichier (ballot ou duels) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matcsv</td><td>: Matrice du fichier csv </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">matduel</td><td>: Matrice des duels à remplir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6188e0dcb0906e1bb509b7e6422685ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6188e0dcb0906e1bb509b7e6422685ab">&#9670;&nbsp;</a></span>genererGraphPython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genererGraphPython </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>baseFilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>destFilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structliste.html">liste</a>&#160;</td>
+          <td class="paramname"><em>larcs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Génére le fichier python qui affiche le graph. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">baseFilePath</td><td>: Chemin du fichier de base </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">destFilePath</td><td>: Chemin du fichier de destination </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">larcs</td><td>: Liste des arcs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7a3542fd3da5b327f845eb477eedccc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3542fd3da5b327f845eb477eedccc6">&#9670;&nbsp;</a></span>lireArguments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lireArguments </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbMethodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="global_8h.html#aa079d9dfd8cb94b5b3368363aa43a891">t_enum_methodes</a> *&#160;</td>
+          <td class="paramname"><em>methodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fileType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>filePath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lis les arguments du programme. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>: Nombre d'arguments </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>: Tableau des arguments </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nbMethodes</td><td>: Nombre de méthodes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">methodes</td><td>: Tableau des méthodes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">fileType</td><td>: Type du fichier (ballot ou duel) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">filePath</td><td>: Chemin du fichier csv </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -133,12 +379,99 @@ EXIT_FAILURE Erreur d'argument dans l'appel du programme </dd></dl>
 
 </div>
 </div>
+<a id="acb2a7789b1003ae5fa1111d61476a277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2a7789b1003ae5fa1111d61476a277">&#9670;&nbsp;</a></span>remplirMethodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remplirMethodes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fileType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="global_8h.html#aa079d9dfd8cb94b5b3368363aa43a891">t_enum_methodes</a> *&#160;</td>
+          <td class="paramname"><em>methodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbMethodes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rempli le tableau de méthode si aucun -m. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileType</td><td>: Type du fichier (ballot ou duel) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">methodes</td><td>: Tableau des méthodes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbMethodes</td><td>: Nombre des méthodes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab322aedf8b0e37ea70bcbd6ffcfdd838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab322aedf8b0e37ea70bcbd6ffcfdd838">&#9670;&nbsp;</a></span>verifArguments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifArguments </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fileType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filePath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie les arguments fournis. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileType</td><td>: Type du fichier (ballot ou duel) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>: Chemin du fichier csv </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">EXIT_FAILURE</td><td>si problème d'arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
+</a> 1.8.13
 </small></address>
 </body>
 </html>

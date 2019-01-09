@@ -6,17 +6,32 @@
 {\ttfamily \#include \char`\"{}liste.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utils\+\_\+sd.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}uninomiales.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}condorcet.\+h\char`\"{}}\newline
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
-\begin{DoxyCompactList}\small\item\em Entrée du programme. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a7a3542fd3da5b327f845eb477eedccc6}{lire\+Arguments} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, int $\ast$nb\+Methodes, \hyperlink{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}{t\+\_\+enum\+\_\+methodes} $\ast$methodes, int $\ast$file\+Type, char $\ast$$\ast$file\+Path)
+\begin{DoxyCompactList}\small\item\em Lis les arguments du programme. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_ab322aedf8b0e37ea70bcbd6ffcfdd838}{verif\+Arguments} (int file\+Type, const char $\ast$file\+Path)
+\begin{DoxyCompactList}\small\item\em Vérifie les arguments fournis. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_acb2a7789b1003ae5fa1111d61476a277}{remplir\+Methodes} (int file\+Type, \hyperlink{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}{t\+\_\+enum\+\_\+methodes} $\ast$methodes, int $\ast$nb\+Methodes)
+\begin{DoxyCompactList}\small\item\em Rempli le tableau de méthode si aucun -\/m. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a6adbf7672a577e237c895d0acad0bc63}{creer\+Mat\+Csv} (char $\ast$file\+Path, \hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn} $\ast$matcsv)
+\begin{DoxyCompactList}\small\item\em Créer la matrice à partir du fichier csv. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a4819fd88ace3b70379beb6f656321334}{creer\+Mat\+Duel} (int file\+Type, \hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn} $\ast$matcsv, \hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn} $\ast$matduel)
+\begin{DoxyCompactList}\small\item\em Créer la matrice de duel. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a678716ece42360a94030758689ff563f}{creer\+Arcs\+Duel} (\hyperlink{structliste}{liste} $\ast$larcs, \hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn} matduel)
+\begin{DoxyCompactList}\small\item\em Créer la liste des arcs de duel. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a6188e0dcb0906e1bb509b7e6422685ab}{generer\+Graph\+Python} (char $\ast$base\+File\+Path, char $\ast$dest\+File\+Path, \hyperlink{structliste}{liste} larcs)
+\begin{DoxyCompactList}\small\item\em Génére le fichier python qui affiche le graph. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{main_8c_a448da4cdb9515be4db08508bad4e3d97}\label{main_8c_a448da4cdb9515be4db08508bad4e3d97}} 
-void \mbox{\hyperlink{main_8c_a448da4cdb9515be4db08508bad4e3d97}{test\+\_\+lecture\+\_\+csv}} ()
+void \hyperlink{main_8c_a448da4cdb9515be4db08508bad4e3d97}{test\+\_\+lecture\+\_\+csv} ()
 \begin{DoxyCompactList}\small\item\em Permet de tester la lecture d\textquotesingle{}un C\+SV. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}\label{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}} 
-void \mbox{\hyperlink{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}{test\+\_\+liste}} ()
-\begin{DoxyCompactList}\small\item\em Permet de tester les listes (de \mbox{\hyperlink{liste_8c}{liste.\+c}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{main_8c_a1c776e682ff62700bedcb6e3dd43a8a0}{test\+\_\+liste} ()
+\begin{DoxyCompactList}\small\item\em Permet de tester les listes (de \hyperlink{liste_8c}{liste.\+c}) \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Entrée du programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
@@ -28,11 +43,108 @@ Alexandre Saillet
 \begin{DoxyDate}{Date}
 CR\+: 01/11/2018 
 
-LU\+: 04/01/2019 
+LU\+: 09/01/2019 
 \end{DoxyDate}
 
 
 \subsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_a678716ece42360a94030758689ff563f}\label{main_8c_a678716ece42360a94030758689ff563f}} 
+\index{main.\+c@{main.\+c}!creer\+Arcs\+Duel@{creer\+Arcs\+Duel}}
+\index{creer\+Arcs\+Duel@{creer\+Arcs\+Duel}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{creer\+Arcs\+Duel()}{creerArcsDuel()}}
+{\footnotesize\ttfamily void creer\+Arcs\+Duel (\begin{DoxyParamCaption}\item[{\hyperlink{structliste}{liste} $\ast$}]{larcs,  }\item[{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}}]{matduel }\end{DoxyParamCaption})}
+
+
+
+Créer la liste des arcs de duel. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em larcs} & \+: Liste des arcs à remplir \\
+\hline
+\mbox{\tt in}  & {\em matduel} & \+: Matrice des duels \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a6adbf7672a577e237c895d0acad0bc63}\label{main_8c_a6adbf7672a577e237c895d0acad0bc63}} 
+\index{main.\+c@{main.\+c}!creer\+Mat\+Csv@{creer\+Mat\+Csv}}
+\index{creer\+Mat\+Csv@{creer\+Mat\+Csv}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{creer\+Mat\+Csv()}{creerMatCsv()}}
+{\footnotesize\ttfamily void creer\+Mat\+Csv (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Path,  }\item[{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn} $\ast$}]{matcsv }\end{DoxyParamCaption})}
+
+
+
+Créer la matrice à partir du fichier csv. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Path} & \+: Chemin du fichier \\
+\hline
+\mbox{\tt out}  & {\em matcsv} & \+: Matrice à remplir \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a4819fd88ace3b70379beb6f656321334}\label{main_8c_a4819fd88ace3b70379beb6f656321334}} 
+\index{main.\+c@{main.\+c}!creer\+Mat\+Duel@{creer\+Mat\+Duel}}
+\index{creer\+Mat\+Duel@{creer\+Mat\+Duel}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{creer\+Mat\+Duel()}{creerMatDuel()}}
+{\footnotesize\ttfamily void creer\+Mat\+Duel (\begin{DoxyParamCaption}\item[{int}]{file\+Type,  }\item[{\hyperlink{global_8h_a6246790d2f4187545380406f21036c05}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn} $\ast$}]{matcsv,  }\item[{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn} $\ast$}]{matduel }\end{DoxyParamCaption})}
+
+
+
+Créer la matrice de duel. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Type} & \+: Type de fichier (ballot ou duels) \\
+\hline
+\mbox{\tt in}  & {\em matcsv} & \+: Matrice du fichier csv \\
+\hline
+\mbox{\tt out}  & {\em matduel} & \+: Matrice des duels à remplir \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a6188e0dcb0906e1bb509b7e6422685ab}\label{main_8c_a6188e0dcb0906e1bb509b7e6422685ab}} 
+\index{main.\+c@{main.\+c}!generer\+Graph\+Python@{generer\+Graph\+Python}}
+\index{generer\+Graph\+Python@{generer\+Graph\+Python}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{generer\+Graph\+Python()}{genererGraphPython()}}
+{\footnotesize\ttfamily void generer\+Graph\+Python (\begin{DoxyParamCaption}\item[{char $\ast$}]{base\+File\+Path,  }\item[{char $\ast$}]{dest\+File\+Path,  }\item[{\hyperlink{structliste}{liste}}]{larcs }\end{DoxyParamCaption})}
+
+
+
+Génére le fichier python qui affiche le graph. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em base\+File\+Path} & \+: Chemin du fichier de base \\
+\hline
+\mbox{\tt in}  & {\em dest\+File\+Path} & \+: Chemin du fichier de destination \\
+\hline
+\mbox{\tt in}  & {\em larcs} & \+: Liste des arcs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a7a3542fd3da5b327f845eb477eedccc6}\label{main_8c_a7a3542fd3da5b327f845eb477eedccc6}} 
+\index{main.\+c@{main.\+c}!lire\+Arguments@{lire\+Arguments}}
+\index{lire\+Arguments@{lire\+Arguments}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{lire\+Arguments()}{lireArguments()}}
+{\footnotesize\ttfamily void lire\+Arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{nb\+Methodes,  }\item[{\hyperlink{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}{t\+\_\+enum\+\_\+methodes} $\ast$}]{methodes,  }\item[{int $\ast$}]{file\+Type,  }\item[{char $\ast$$\ast$}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Lis les arguments du programme. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em argc} & \+: Nombre d\textquotesingle{}arguments \\
+\hline
+\mbox{\tt in}  & {\em argv} & \+: Tableau des arguments \\
+\hline
+\mbox{\tt out}  & {\em nb\+Methodes} & \+: Nombre de méthodes \\
+\hline
+\mbox{\tt out}  & {\em methodes} & \+: Tableau des méthodes \\
+\hline
+\mbox{\tt out}  & {\em file\+Type} & \+: Type du fichier (ballot ou duel) \\
+\hline
+\mbox{\tt out}  & {\em file\+Path} & \+: Chemin du fichier csv \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.\+c@{main.\+c}!main@{main}}
 \index{main@{main}!main.\+c@{main.\+c}}
@@ -48,3 +160,44 @@ E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS Arrêt normal du programme
 
 E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE Erreur d\textquotesingle{}argument dans l\textquotesingle{}appel du programme 
 \end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_acb2a7789b1003ae5fa1111d61476a277}\label{main_8c_acb2a7789b1003ae5fa1111d61476a277}} 
+\index{main.\+c@{main.\+c}!remplir\+Methodes@{remplir\+Methodes}}
+\index{remplir\+Methodes@{remplir\+Methodes}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{remplir\+Methodes()}{remplirMethodes()}}
+{\footnotesize\ttfamily void remplir\+Methodes (\begin{DoxyParamCaption}\item[{int}]{file\+Type,  }\item[{\hyperlink{global_8h_aa079d9dfd8cb94b5b3368363aa43a891}{t\+\_\+enum\+\_\+methodes} $\ast$}]{methodes,  }\item[{int $\ast$}]{nb\+Methodes }\end{DoxyParamCaption})}
+
+
+
+Rempli le tableau de méthode si aucun -\/m. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Type} & \+: Type du fichier (ballot ou duel) \\
+\hline
+\mbox{\tt out}  & {\em methodes} & \+: Tableau des méthodes \\
+\hline
+\mbox{\tt in}  & {\em nb\+Methodes} & \+: Nombre des méthodes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_ab322aedf8b0e37ea70bcbd6ffcfdd838}\label{main_8c_ab322aedf8b0e37ea70bcbd6ffcfdd838}} 
+\index{main.\+c@{main.\+c}!verif\+Arguments@{verif\+Arguments}}
+\index{verif\+Arguments@{verif\+Arguments}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{verif\+Arguments()}{verifArguments()}}
+{\footnotesize\ttfamily void verif\+Arguments (\begin{DoxyParamCaption}\item[{int}]{file\+Type,  }\item[{const char $\ast$}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Vérifie les arguments fournis. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Type} & \+: Type du fichier (ballot ou duel) \\
+\hline
+\mbox{\tt in}  & {\em file\+Path} & \+: Chemin du fichier csv \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE} & si problème d\textquotesingle{}arguments \\
+\hline
+\end{DoxyExceptions}

@@ -1,0 +1,81 @@
+\hypertarget{condorcet_8c}{}\section{Référence du fichier src/condorcet.c}
+\label{condorcet_8c}\index{src/condorcet.\+c@{src/condorcet.\+c}}
+{\ttfamily \#include \char`\"{}condorcet.\+h\char`\"{}}\newline
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{condorcet_8c_a9a0aafec553c2b43bfa19ad30710edd6}{chercher\+Vainqueur\+Condorcet} (\hyperlink{structliste}{liste} larcs, int $\ast$ind\+Vainqueur, int nb\+Candidats)
+\begin{DoxyCompactList}\small\item\em Cherche un vainqueur de condorcet sans conflits. \end{DoxyCompactList}\item 
+void \hyperlink{condorcet_8c_a8b6f1afba59dce71dc65d9b69940d35d}{chercher\+Vainqueur\+Minimax} (\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn} matduel, int $\ast$ind\+Vainqueur)
+\begin{DoxyCompactList}\small\item\em Cherche le vainqueur condorcet d\textquotesingle{}après la méthode minimax. \end{DoxyCompactList}\item 
+void \hyperlink{condorcet_8c_aec63ec6df82c381d52e4fa804c2a283e}{chercher\+Vainqueur\+Paires} (\hyperlink{structliste}{liste} larcs, int $\ast$ind\+Vainqueur, int nb\+Candidats)
+\begin{DoxyCompactList}\small\item\em Cherche le vainqueur condorcet d\textquotesingle{}après la méthode minimax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Alexandre Saillet 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+CR 04/01/2019 
+
+LU 09/01/2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{condorcet_8c_a9a0aafec553c2b43bfa19ad30710edd6}\label{condorcet_8c_a9a0aafec553c2b43bfa19ad30710edd6}} 
+\index{condorcet.\+c@{condorcet.\+c}!chercher\+Vainqueur\+Condorcet@{chercher\+Vainqueur\+Condorcet}}
+\index{chercher\+Vainqueur\+Condorcet@{chercher\+Vainqueur\+Condorcet}!condorcet.\+c@{condorcet.\+c}}
+\subsubsection{\texorpdfstring{chercher\+Vainqueur\+Condorcet()}{chercherVainqueurCondorcet()}}
+{\footnotesize\ttfamily void chercher\+Vainqueur\+Condorcet (\begin{DoxyParamCaption}\item[{\hyperlink{structliste}{liste}}]{larcs,  }\item[{int $\ast$}]{ind\+Vainqueur,  }\item[{int}]{nb\+Candidats }\end{DoxyParamCaption})}
+
+
+
+Cherche un vainqueur de condorcet sans conflits. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em larcs} & \+: Liste des arcs \\
+\hline
+\mbox{\tt out}  & {\em ind\+Vainqueur} & \+: Indice du vainqueur à partir de l\textquotesingle{}offset \\
+\hline
+\mbox{\tt in}  & {\em nb\+Candidats} & \+: Nombre de candidats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{condorcet_8c_a8b6f1afba59dce71dc65d9b69940d35d}\label{condorcet_8c_a8b6f1afba59dce71dc65d9b69940d35d}} 
+\index{condorcet.\+c@{condorcet.\+c}!chercher\+Vainqueur\+Minimax@{chercher\+Vainqueur\+Minimax}}
+\index{chercher\+Vainqueur\+Minimax@{chercher\+Vainqueur\+Minimax}!condorcet.\+c@{condorcet.\+c}}
+\subsubsection{\texorpdfstring{chercher\+Vainqueur\+Minimax()}{chercherVainqueurMinimax()}}
+{\footnotesize\ttfamily void chercher\+Vainqueur\+Minimax (\begin{DoxyParamCaption}\item[{\hyperlink{global_8h_afbda29014eac4aef9f13b911074e4cf1}{t\+\_\+mat\+\_\+int\+\_\+dyn}}]{matduel,  }\item[{int $\ast$}]{ind\+Vainqueur }\end{DoxyParamCaption})}
+
+
+
+Cherche le vainqueur condorcet d\textquotesingle{}après la méthode minimax. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em matduel} & \+: Matrice de duels \\
+\hline
+\mbox{\tt out}  & {\em ind\+Vainqueur} & \+: Indice du vainqueur à partir de l\textquotesingle{}offset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{condorcet_8c_aec63ec6df82c381d52e4fa804c2a283e}\label{condorcet_8c_aec63ec6df82c381d52e4fa804c2a283e}} 
+\index{condorcet.\+c@{condorcet.\+c}!chercher\+Vainqueur\+Paires@{chercher\+Vainqueur\+Paires}}
+\index{chercher\+Vainqueur\+Paires@{chercher\+Vainqueur\+Paires}!condorcet.\+c@{condorcet.\+c}}
+\subsubsection{\texorpdfstring{chercher\+Vainqueur\+Paires()}{chercherVainqueurPaires()}}
+{\footnotesize\ttfamily void chercher\+Vainqueur\+Paires (\begin{DoxyParamCaption}\item[{\hyperlink{structliste}{liste}}]{larcs,  }\item[{int $\ast$}]{ind\+Vainqueur,  }\item[{int}]{nb\+Candidats }\end{DoxyParamCaption})}
+
+
+
+Cherche le vainqueur condorcet d\textquotesingle{}après la méthode minimax. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em larcs} & \+: Liste des arcs \\
+\hline
+\mbox{\tt out}  & {\em ind\+Vainqueur} & \+: Indice du vainqueur à partir de l\textquotesingle{}offset \\
+\hline
+\mbox{\tt in}  & {\em nb\+Candidats} & \+: Nombre de candidats \\
+\hline
+\end{DoxyParams}

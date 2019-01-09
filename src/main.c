@@ -4,7 +4,7 @@
  * @author Vincent Dugat
  * @author Alexandre Saillet
  * @date CR: 01/11/2018
- * @date LU: 06/01/2019
+ * @date LU: 09/01/2019
  */
 
 #include <stdio.h>
@@ -16,6 +16,15 @@
 #include "uninomiales.h"
 #include "condorcet.h"
 
+/**
+ * @brief Lis les arguments du programme
+ * @param[in] argc : Nombre d'arguments
+ * @param[in] argv : Tableau des arguments
+ * @param[out] nbMethodes : Nombre de méthodes
+ * @param[out] methodes : Tableau des méthodes
+ * @param[out] fileType : Type du fichier (ballot ou duel)
+ * @param[out] filePath : Chemin du fichier csv
+ */
 void lireArguments(int argc, char* argv[], int *nbMethodes, t_enum_methodes *methodes, int *fileType, char **filePath) {
     for (int i = 1; i < argc; i++) {
         // -i ou -d déjà présent
@@ -77,6 +86,12 @@ void lireArguments(int argc, char* argv[], int *nbMethodes, t_enum_methodes *met
     }
 }
 
+/**
+ * @brief Vérifie les arguments fournis
+ * @param[in] fileType : Type du fichier (ballot ou duel)
+ * @param[in] filePath : Chemin du fichier csv
+ * @throw EXIT_FAILURE si problème d'arguments
+ */
 void verifArguments(int fileType, const char* filePath) {
     // NI -i NI -d
     if (fileType == -1) {
@@ -91,6 +106,12 @@ void verifArguments(int fileType, const char* filePath) {
     }
 }
 
+/**
+ * @brief Rempli le tableau de méthode si aucun -m
+ * @param[in] fileType : Type du fichier (ballot ou duel)
+ * @param[out] methodes : Tableau des méthodes
+ * @param[in] nbMethodes : Nombre des méthodes
+ */
 void remplirMethodes(int fileType, t_enum_methodes *methodes, int *nbMethodes) {
     methodes[(*nbMethodes)++] = CM;
     methodes[(*nbMethodes)++] = CP;
@@ -102,6 +123,11 @@ void remplirMethodes(int fileType, t_enum_methodes *methodes, int *nbMethodes) {
     }
 }
 
+/**
+ * @brief Créer la matrice à partir du fichier csv
+ * @param[in] filePath : Chemin du fichier
+ * @param[out] matcsv : Matrice à remplir
+ */
 void creerMatCsv(char* filePath, t_mat_char_star_dyn *matcsv) {
     FILE* filep = fopen(filePath, "r");
     // Le fichier n'a pas pu être ouvert
@@ -117,6 +143,12 @@ void creerMatCsv(char* filePath, t_mat_char_star_dyn *matcsv) {
     fclose(filep);
 }
 
+/**
+ * @brief Créer la matrice de duel
+ * @param[in] fileType : Type de fichier (ballot ou duels)
+ * @param[in] matcsv : Matrice du fichier csv
+ * @param[out] matduel : Matrice des duels à remplir
+ */
 void creerMatDuel(int fileType, t_mat_char_star_dyn *matcsv, t_mat_int_dyn *matduel) {
     // -i
     if (fileType == 1) {
@@ -149,6 +181,11 @@ void creerMatDuel(int fileType, t_mat_char_star_dyn *matcsv, t_mat_int_dyn *matd
     }
 }
 
+/**
+ * @brief Créer la liste des arcs de duel
+ * @param[out] larcs : Liste des arcs à remplir
+ * @param[in] matduel : Matrice des duels
+ */
 void creerArcsDuel(liste *larcs, t_mat_int_dyn matduel) {
     createList(larcs);
     for (int i = 0; i < matduel.nbRows; i++) {
@@ -164,6 +201,12 @@ void creerArcsDuel(liste *larcs, t_mat_int_dyn matduel) {
     }
 }
 
+/**
+ * @brief Génére le fichier python qui affiche le graph
+ * @param[in] baseFilePath : Chemin du fichier de base
+ * @param[in] destFilePath : Chemin du fichier de destination
+ * @param[in] larcs : Liste des arcs
+ */
 void genererGraphPython(char* baseFilePath, char* destFilePath, liste larcs) {
     FILE* pyTestFile = fopen(baseFilePath, "r");
     FILE* pyGraphFile = fopen(destFilePath, "w");
@@ -307,14 +350,14 @@ int main(int argc, char* argv[]) {
 
     t_mat_int_dyn matduel;
     creerMatDuel(fileType, &matcsv, &matduel);
-    affiche_t_mat_int_dyn(matduel, stdout);
+    //affiche_t_mat_int_dyn(matduel, stdout);
 
     liste larcs;
     creerArcsDuel(&larcs, matduel);
     //dumpList(larcs, stdout);
 
-    char* baseFilePath = "../../pollTests.py";
-    char* destFilePath = "../../pollGraph.py";
+    char* baseFilePath = "pollTests.py";
+    char* destFilePath = "pollGraph.py";
     genererGraphPython(baseFilePath, destFilePath, larcs);
 
     for (int i = 0; i < nbMethodes; i++) {

@@ -1,9 +1,9 @@
 /**
  * @file condorcet.h
- * @brief 
+ * @brief Méthodes de vote condorcet
  * @author Alexandre Saillet
  * @date CR 04/01/2019
- * @date LU 06/01/2019
+ * @date LU 09/01/2019
  */
 
 #ifndef PROJET_S3_CONDORCET_H

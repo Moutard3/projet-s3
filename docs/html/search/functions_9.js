@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nbeltlist',['nbEltList',['../liste_8c.html#aa06cfcafd95438aeebfd731dbbffd9a0',1,'nbEltList(liste lst):&#160;liste.c'],['../liste_8h.html#aa06cfcafd95438aeebfd731dbbffd9a0',1,'nbEltList(liste lst):&#160;liste.c']]]
+  ['lirearguments',['lireArguments',['../main_8c.html#a7a3542fd3da5b327f845eb477eedccc6',1,'main.c']]]
 ];

@@ -75,8 +75,11 @@ bool circuits(liste larcs, int nbCandidats){// recherche de circuits pour tout l
     init_mat_int(tabVus,nbCandidats,nbCandidats,0);
     tabMark[orig]=OUVERT;
     res=dfs(larcs,orig,tabMark,tabVus);
-    if (res)
+    if (res) {
+      free(tabVus);
+      free(tabMark);
       return true; // on sort
+    }
   }
   free(tabVus);
   free(tabMark);

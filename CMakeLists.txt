@@ -19,4 +19,4 @@ add_executable(projet_s3
         src/condorcet.c
         src/condorcet.h
         src/circuit.c
-        src/circuit.h)
+        src/circuit.h src/alternatif.c src/alternatif.h)
